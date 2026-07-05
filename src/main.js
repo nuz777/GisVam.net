@@ -11,9 +11,9 @@ const products = [
     reviewCount: 234,
     description: 'Camiseta de alta calidad con estampado único de gatito en el bolsillo frontal. Confeccionada en algodón suave y transpirable, ideal para el día a día. Cuello redondo reforzado, costuras resistentes y corte recto que favorece todo tipo de cuerpo. Fácil de combinar con jeans, shorts o faldas. Disponible en varias tallas. Lavable a máquina sin perder su forma ni color.',
     images: [
-      './public/img/camisetas/image.png',
-      './public/img/camisetas/camiseta.png',
-      './public/img/camisetas/camiseta2.png',
+      '/img/camisetas/image.webp',
+      '/img/camisetas/camiseta.webp',
+      '/img/camisetas/camiseta2.webp',
     ],
   },
   {
@@ -25,8 +25,8 @@ const products = [
     reviewCount: 189,
     description: 'Camiseta de manga corta con llamativo estampado completo de dragón chino en colores de contraste. Confeccionada en tela suave y fresca, perfecta para el verano. Cuello redondo clásico, mangas cortas con costuras reforzadas y dobladillo duradero. Estilo moderno y versátil que funciona tanto para looks casuales como para ocasiones especiales. Un excelente regalo para los amantes de la cultura asiática y el diseño único. Lavar en frío recomendado.',
     images: [
-      './public/img/camisetas/camiseta3.png',
-      './public/img/camisetas/camiseta4.png',
+      '/img/camisetas/camiseta3.webp',
+      '/img/camisetas/camiseta4.webp',
     ],
   },
   {
@@ -38,9 +38,9 @@ const products = [
     reviewCount: 312,
     description: 'Camiseta de hombre con estilo americano moderno, diseño minimalista y corte contemporáneo. Confeccionada en algodón premium de alta gramaje para mayor durabilidad y confort. Costuras dobles en mangas y laterales, cuello reforzado que no se deforma con los lavados. Ideal para uso diario, oficina o salidas casuales. Disponible en多种 colores clásicos. Tela anti-pilling que mantiene su aspecto impecable lavado tras lavado.',
     images: [
-       './public/img/camisetas/camiseta5.png',
-      './public/img/camisetas/camiseta6.png',
-       './public/img/camisetas/camiseta7.png',
+      '/img/camisetas/camiseta5.webp',
+      '/img/camisetas/camiseta6.webp',
+      '/img/camisetas/camiseta7.webp',
     ],
   },
   {
@@ -52,8 +52,8 @@ const products = [
     reviewCount: 156,
     description: 'Reloj inteligente deportivo con pantalla táctil HD a color. Monitoreo las 24 horas de frecuencia cardíaca, oxímetro de sangre (SpO2), análisis de sueño y medición de estrés. Más de 100 modos deportivos incluyendo running, natación, ciclismo y yoga. Resistente al agua IP68. Batería de larga duración hasta 15 días en uso normal. Compatible con Android y iOS. Incluye notificaciones de llamadas, mensajes y redes sociales. Podómetro, calorímetro y recordatorio de actividad sedentaria integrados.',
     images: [
-      './public/img/tecnologia/image1.png',
-      './public/img/tecnologia/image2.png',
+      '/img/tecnologia/image1.webp',
+      '/img/tecnologia/image2.webp',
     ],
   },
   {
@@ -65,8 +65,8 @@ const products = [
     reviewCount: 445,
     description: 'Camiseta premium confeccionada en algodón peinado 100% de alta calidad. Tejido de 180 gramos que brinda la combinación perfecta entre suavidad y durabilidad. Corte moderno y entallado que estiliza la figura. Costuras reforzadas en todos los puntos de tensión, cuello ribeteado que mantiene su forma original. Libre de químicos irritantes, hipoalergénica y transpirable. Disponible en múltiples tallas. Resistente a múltiples lavados sin encogerse ni destejerse. Hecha con procesos de producción sostenibles.',
     images: [
-    './public/img/camisetas/camiseta8.png',
-    './public/img/camisetas/camiseta9.png',
+      '/img/camisetas/camiseta8.webp',
+      '/img/camisetas/camiseta9.webp',
     ],
   },
   {
@@ -78,8 +78,8 @@ const products = [
     reviewCount: 98,
     description: 'Lámpara LED inteligente con control desde app móvil compatible con iOS y Android. Más de 16 millones de colores para crear el ambiente perfecto en cualquier habitación. Sincronización con música en tiempo real gracias a su micrófono integrado — las luces bailan al ritmo de tu playlist favorita. Modos preestablecidos: lectura, descanso, fiesta y atardecer. Temporizador programable y control por voz compatible con asistentes virtuales. Fácil instalación, solo rosca en un socket estándar E27. Iluminación suave sin parpadeo que cuida tu vista.',
     images: [
-      './public/img/camisetas/camiseta10.png',
-    './public/img/camisetas/camiseta11.png',
+      '/img/camisetas/camiseta10.webp',
+      '/img/camisetas/camiseta11.webp',
     ],
   },
   {
@@ -91,8 +91,8 @@ const products = [
     reviewCount: 267,
     description: 'Kit completo de maquillaje profesional con 48 piezas ideal tanto para principiantes como para expertas. Incluye paleta de 32 sombras con acabados mate, brillante y satinado, 8 labiales de larga duración, 6 brochas profesionales con cerdas suaves y un espejo de bolsillo. Los pigmentos son altamente concentrados para máxima intensidad de color con mínima aplicación. Fórmula hipoalergénica libre de parabenos y fragancias. Estuche compacto con organizador integrado, perfecto para llevar a cualquier lugar. Crea desde looks naturales hasta maquillajes artísticos.',
     images: [
-      './public/img/camisetas/camiseta12.png',
-    './public/img/camisetas/camiseta13.png',
+      '/img/camisetas/camiseta12.webp',
+      '/img/camisetas/camiseta13.webp',
     ],
   },
   {
@@ -104,13 +104,10 @@ const products = [
     reviewCount: 203,
     description: 'Cargador inalámbrico 3 en 1 con diseño compacto y elegante perfecto para tu mesa de noche o escritorio. Carga simultáneamente tu teléfono inteligente (compatible con carga rápida Qi hasta 15W), tus auriculares Bluetooth y tu reloj inteligente. Tecnología de detección inteligente de objetos extraños, protección contra sobrecarga, sobrecalentamiento y cortocircuitos. Base antideslizante con LED indicador de estado. Compatible con todas las fundas delgadas (menos de 5mm). Incluye adaptador de corriente USB-C de 30W. Diseño minimalista que combina con cualquier decoración.',
     images: [
-   './public/img/camisetas/camiseta14.png',
-    './public/img/camisetas/camiseta15.png',
-
-
+      '/img/camisetas/camiseta14.webp',
+      '/img/camisetas/camiseta15.webp',
     ],
   },
-  
 ];
 
 let cart = [];
@@ -257,7 +254,7 @@ function renderProducts(list) {
               .map(
                 (img, i) =>
                   `<div class="carousel-slide">
-                <img src="${img}" alt="${p.name} - imagen ${i + 1}" loading="lazy" onerror="this.parentElement.innerHTML='<div class=img-placeholder>📷</div>'">
+                <img src="${img}" alt="${p.name} - imagen ${i + 1}" width="400" height="400" loading="lazy" onerror="this.parentElement.innerHTML='<div class=img-placeholder>📷</div>'">
               </div>`
               )
               .join('')}
