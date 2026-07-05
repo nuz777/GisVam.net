@@ -108,6 +108,21 @@ const products = [
       '/img/camisetas/camiseta15.webp',
     ],
   },
+
+   {
+    id: 9,
+    name: 'Juego de 4 piezas de reloj de acero inoxidable',
+    originalPrice: 89900,
+    price: 17900,
+    rating: 4.6,
+    reviewCount: 203,
+    description: 'Cargador inalámbrico 3 en 1 con diseño compacto y elegante perfecto para tu mesa de noche o escritorio. Carga simultáneamente tu teléfono inteligente (compatible con carga rápida Qi hasta 15W), tus auriculares Bluetooth y tu reloj inteligente. Tecnología de detección inteligente de objetos extraños, protección contra sobrecarga, sobrecalentamiento y cortocircuitos. Base antideslizante con LED indicador de estado. Compatible con todas las fundas delgadas (menos de 5mm). Incluye adaptador de corriente USB-C de 30W. Diseño minimalista que combina con cualquier decoración.',
+    images: [
+      '/img/accsesorios/reloj.png',
+      '/img/accsesorios/reloj2.webp',
+      '/img/accsesorios/reloj3.png',
+    ],
+  },
 ];
 
 let cart = [];
