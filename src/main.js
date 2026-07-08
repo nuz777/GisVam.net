@@ -6,6 +6,7 @@ const products = [
     id: 1,
     name: 'Camiseta versátil de moda con estampado de gato de bolsillo',
     size: 'M',
+      deal: { flashPrice: 35000 },
     originalPrice: 59000,
     price: 35000,
     rating: 4.8,
@@ -26,6 +27,7 @@ const products = [
     reviewCount: 189,
     description: 'Reloj de pulsera para hombre con diseño elegante y moderno. Caja de acero inoxidable resistente al agua, correa ajustable de cuero genuino y movimiento de cuarzo preciso. Ideal para uso diario o eventos formales. Pantalla analógica con marcadores luminosos para fácil lectura en la oscuridad. Incluye garantía limitada de 1 año.',
     images: [
+            '/img/camisetas/camiseta4n.webp',
       '/img/camisetas/camiseta3.webp',
       '/img/camisetas/camiseta4.webp',
     ],
@@ -38,7 +40,7 @@ const products = [
     price: 38900,
     rating: 4.7,
     reviewCount: 312,
-    description: 'Camiseta de hombre con estilo americano moderno, diseño minimalista y corte contemporáneo. Confeccionada en algodón premium de alta gramaje para mayor durabilidad y confort. Costuras dobles en mangas y laterales, cuello reforzado que no se deforma con los lavados. Ideal para uso diario, oficina o salidas casuales. Disponible en多种 colores clásicos. Tela anti-pilling que mantiene su aspecto impecable lavado tras lavado.',
+    description: 'Camiseta de hombre con estilo americano moderno, diseño minimalista y corte contemporáneo. Confeccionada en algodón premium de alta gramaje para mayor durabilidad y confort. Costuras dobles en mangas y laterales, cuello reforzado que no se deforma con los lavados. Ideal para uso diario, oficina o salidas casuales. Disponible en varios colores clásicos. Tela anti-pilling que mantiene su aspecto impecable lavado tras lavado.',
     images: [
       '/img/camisetas/camiseta5.webp',
       '/img/camisetas/camiseta6.webp',
@@ -63,6 +65,7 @@ const products = [
     id: 5,
     name: 'Cruces Camiseta negra',
     size: 'M',
+    deal: { flashPrice: 37000 },
     originalPrice: 79900,
     price: 36000,
     rating: 4.9,
@@ -94,7 +97,7 @@ const products = [
     price: 35000,
     rating: 4.7,
     reviewCount: 267,
-    description: 'Bolso negro clásico para mujer, confeccionado en cuero genuino de alta calidad. Diseño elegante y versátil, ideal para ocasiones formales o casuales. Espacio interior amplio con compartimentos organizados. Asas regulables y cierre seguro. Disponible en múltiples colores y tallas. Lavable a máquina sin perder su forma ni color.',
+    description: 'Bolso negro clásico para mujer, confeccionado en cuero genuino de alta calidad. Diseño elegante y versátil, ideal para ocasiones formales o casuales. Espacio interior amplio con compartimentos organizados. Asas regulables y cierre seguro. Disponible en múltiples colores y tallas. Fácil de limpiar con un paño húmedo para mantener su aspecto impecable.',
     images: [
       '/img/camisetas/camiseta12.webp',
       '/img/camisetas/camiseta13.webp',
@@ -108,7 +111,7 @@ const products = [
     price: 36900,
     rating: 4.6,
     reviewCount: 203,
-    description: 'Cargador inalámbrico 3 en 1 con diseño compacto y elegante perfecto para tu mesa de noche o escritorio. Carga simultáneamente tu teléfono inteligente (compatible con carga rápida Qi hasta 15W), tus auriculares Bluetooth y tu reloj inteligente. Tecnología de detección inteligente de objetos extraños, protección contra sobrecarga, sobrecalentamiento y cortocircuitos. Base antideslizante con LED indicador de estado. Compatible con todas las fundas delgadas (menos de 5mm). Incluye adaptador de corriente USB-C de 30W. Diseño minimalista que combina con cualquier decoración.',
+    description: 'Polo de manga corta para hombre en color verde, con diseño clásico y moderno. Confeccionado en algodón fresco y transpirable, ideal para uso diario o eventos casuales. Cuello tipo polo con botones, mangas cortas y corte recto que brinda comodidad. Fácil de combinar con jeans, pantalones de vestir o shorts. Disponible en varias tallas. Lavable a máquina sin perder su forma ni color.',
     images: [
       '/img/camisetas/camiseta14.webp',
       '/img/camisetas/camiseta15.webp',
@@ -140,6 +143,8 @@ const products = [
     description: 'Conjunto de animadora de top corto y falda plisada, ideal para disfraces, eventos deportivos o sesiones de fotos. Hecho de poliéster y spandex de alta calidad, suave y elástico para un ajuste cómodo. Top con cuello redondo y mangas cortas, falda con cintura elástica y pliegues que permiten libertad de movimiento. Disponible en varios colores y tallas. Fácil de lavar a mano o a máquina en ciclo delicado.',
     images: [
        '/img/camisetas/camiseta16.webp',
+       '/img/camisetas/camiseta16n1.webp',
+        '/img/camisetas/camiseta16n2.webp',
     ],
   },
 
@@ -152,7 +157,7 @@ const products = [
     price: 35000,
     rating: 4.6,
     reviewCount: 203,
-    description: 'Y2K Camiseta con patrón de letras góticas, ideal para disfraces, eventos deportivos o sesiones de fotos. Hecho de poliéster y spandex de alta calidad, suave y elástico para un ajuste cómodo. Top con cuello redondo y mangas cortas, falda con cintura elástica y pliegues que permiten libertad de movimiento. Disponible en varios colores y tallas. Fácil de lavar a mano o a máquina en ciclo delicado.',
+    description: 'Camiseta Y2K con patrón de letras góticas, ideal para un look urbano y alternativo. Confeccionada en poliéster y spandex de alta calidad, suave y elástica para un ajuste cómodo. Cuello redondo, mangas cortas y corte recto que estiliza la figura. Perfecta para combinar con jeans, faldas o pantalones cargo. Disponible en varios colores y tallas. Fácil de lavar a mano o a máquina en ciclo delicado.',
     images: [
        '/img/camisetas/camiseta17.webp',
        '/img/camisetas/camiseta18.webp',
@@ -167,7 +172,7 @@ const products = [
     price: 32000,
     rating: 4.6,
     reviewCount: 203,
-    description: 'Camiseta de Transferencia Térmica para Hombre, ideal para disfraces, eventos deportivos o sesiones de fotos. Hecho de poliéster y spandex de alta calidad, suave y elástico para un ajuste cómodo. Top con cuello redondo y mangas cortas, falda con cintura elástica y pliegues que permiten libertad de movimiento. Disponible en varios colores y tallas. Fácil de lavar a mano o a máquina en ciclo delicado.',
+    description: 'Camiseta de transferencia térmica para hombre con estampado moderno de alta duración. Confeccionada en poliéster y spandex de alta calidad, suave y elástica para un ajuste cómodo. Cuello redondo, mangas cortas y corte atlético que se adapta al cuerpo. Ideal para uso diario, entrenamiento o eventos casuales. Disponible en varios colores y tallas. Fácil de lavar a mano o a máquina en ciclo delicado.',
     images: [
        '/img/camisetas/camiseta19.webp',
        '/img/camisetas/camiseta20.webp',
@@ -182,7 +187,7 @@ const products = [
     price: 37000,
     rating: 4.6,
     reviewCount: 203,
-    description: 'Conjunto de 3 camisetas sin tirantes con estampado gótico punk vintage, eventos deportivos o sesiones de fotos. Hecho de poliéster y spandex de alta calidad, suave y elástico para un ajuste cómodo. Top con cuello redondo y mangas cortas, falda con cintura elástica y pliegues que permiten libertad de movimiento. Disponible en varios colores y tallas. Fácil de lavar a mano o a máquina en ciclo delicado.',
+    description: 'Lote de 3 camisetas sin tirantes con estampado gótico punk vintage, perfectas para un estilo alternativo y audaz. Confeccionadas en poliéster y spandex de alta calidad, suaves y elásticas para un ajuste cómodo. Diseño sin tirantes con corte recto que permite libertad de movimiento. Ideales para combinar con jeans, chaquetas o faldas. Disponibles en varios colores y tallas. Fáciles de lavar a mano o a máquina en ciclo delicado.',
     images: [
        '/img/camisetas/camiseta21.webp',
        '/img/camisetas/camiseta22.webp',
@@ -197,7 +202,7 @@ const products = [
     price: 17000,
     rating: 4.6,
     reviewCount: 203,
-    description: '10 Pares/Set de Aretes de Aleación de Moda Mariposa, lor de Rosa, Cruz, Diseño de Corazones, Joyería Regalo para Damas y Niñas',
+    description: 'Set de 10 pares de aretes de aleación de moda con diseños variados: mariposa, rosa, cruz, corazones y más. Joyería ligera y resistente, ideal para regalo para damas y niñas. Perfectos para combinar con diferentes estilos y outfits del día a día o para ocasiones especiales.',
     images: [
        '/img/camisetas/camiseta23.webp',
     ],
@@ -210,7 +215,7 @@ const products = [
     price: 35000,
     rating: 4.6,
     reviewCount: 203,
-    description: 'Top halter con decoración de estrella de mar, ideal para disfraces, eventos deportivos o sesiones de fotos. Hecho de poliéster y spandex de alta calidad, suave y elástico para un ajuste cómodo. Top con cuello redondo y mangas cortas, falda con cintura elástica y pliegues que permiten libertad de movimiento. Disponible en varios colores y tallas. Fácil de lavar a mano o a máquina en ciclo delicado.',
+    description: 'Top halter con decoración de estrella de mar, ideal para looks playeros, veraniegos o sesiones de fotos. Confeccionado en poliéster y spandex de alta calidad, suave y elástico para un ajuste cómodo. Diseño halter con cuello en V y espalda descubierta que realza la figura. Disponible en varios colores y tallas. Fácil de lavar a mano o a máquina en ciclo delicado.',
     images: [
        '/img/camisetas/camiseta24.webp',
        '/img/camisetas/camiseta25.webp',
@@ -224,7 +229,7 @@ const products = [
     price: 30000,
     rating: 4.6,
     reviewCount: 203,
-    description: 'Top sin espalda con cuello redondo',
+    description: 'Top sin espalda con cuello redondo, ideal para looks modernos y atrevidos. Confeccionado en tela suave y elástica que se adapta al cuerpo cómodamente. Diseño de espalda descubierta que aporta un toque sensual y fresco. Perfecto para combinar con jeans, faldas o pantalones de tiro alto. Disponible en varios colores y tallas.',
     images: [
        '/img/camisetas/camiseta26.webp',
        '/img/camisetas/camiseta27.webp',
@@ -628,6 +633,14 @@ function openBuyModal(product) {
       <p class="modal-footer-text">Después del pago, envíanos el comprobante por WhatsApp</p>
     </div>
   `;
+
+  document.getElementById('modal-cart-float').innerHTML = `
+    <button class="add-cart-btn modal-float-btn" data-cart-add="${product.id}">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+      Agregar al carrito
+    </button>
+  `;
+  document.getElementById('modal-cart-float').classList.add('has-float');
 
   modal.classList.add('open');
 

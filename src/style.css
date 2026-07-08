@@ -714,6 +714,13 @@ body {
   white-space: nowrap;
 }
 
+.modal-float-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
 .add-cart-btn:hover {
   background: var(--blue-50);
   transform: scale(1.01);
@@ -832,6 +839,23 @@ body {
   padding: 20px;
 }
 
+.modal-cart-float {
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
+  padding: 12px 20px;
+  background: linear-gradient(to top, var(--white) 60%, transparent);
+  display: none;
+}
+
+.modal-cart-float .modal-float-btn {
+  width: 100%;
+}
+
+.modal-cart-float.has-float {
+  display: block;
+}
+
 .modal-overlay.open .modal {
   transform: scale(1) translateY(0);
 }
@@ -919,6 +943,10 @@ body {
   gap: 6px;
   overflow-x: auto;
   padding: 2px 0;
+}
+
+#buy-modal .modal-gallery .modal-thumbnails {
+  padding: 2px 20px;
 }
 
 .modal-thumb {
