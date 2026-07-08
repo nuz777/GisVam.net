@@ -1409,6 +1409,72 @@ body {
   color: var(--gray-500);
 }
 
+/* ===== WELCOME MODAL ===== */
+.modal--welcome {
+  max-width: 400px;
+  text-align: center;
+  padding: 40px 32px 32px;
+}
+
+.welcome-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.welcome-img-wrap {
+  width: 100%;
+  max-height: 200px;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  margin-bottom: 8px;
+}
+
+.welcome-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.welcome-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--blue-500);
+  line-height: 1.2;
+}
+
+.welcome-text {
+  font-size: 14px;
+  color: var(--gray-600);
+  line-height: 1.6;
+  max-width: 320px;
+}
+
+.welcome-btn {
+  margin-top: 8px;
+  padding: 12px 36px;
+  background: var(--blue-500);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.welcome-btn:hover {
+  background: var(--blue-600);
+  transform: scale(1.02);
+}
+
+.welcome-btn:active {
+  transform: scale(0.97);
+}
+
 /* ===== LOADING PLACEHOLDER ===== */
 .img-placeholder {
   width: 100%;

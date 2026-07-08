@@ -535,6 +535,14 @@ function bindBuyEvents() {
       if (product) openBuyModal(product);
     });
   });
+
+  document.getElementById('products-grid').addEventListener('click', (e) => {
+    const card = e.target.closest('.product-card');
+    if (!card) return;
+    const id = Number(card.dataset.id);
+    const product = products.find((p) => p.id === id);
+    if (product) openBuyModal(product);
+  });
 }
 
 let modalCarouselIndex = 0;
@@ -710,6 +718,20 @@ document.addEventListener('DOMContentLoaded', () => {
   renderProducts();
   updateDealTimers();
   setInterval(updateDealTimers, 1000);
+
+  if (!sessionStorage.getItem('welcomeDismissed')) {
+    document.getElementById('welcome-modal').classList.add('open');
+  }
+  document.getElementById('welcome-close').addEventListener('click', () => {
+    document.getElementById('welcome-modal').classList.remove('open');
+    sessionStorage.setItem('welcomeDismissed', '1');
+  });
+  document.getElementById('welcome-modal').addEventListener('click', (e) => {
+    if (e.target === e.currentTarget) {
+      document.getElementById('welcome-modal').classList.remove('open');
+      sessionStorage.setItem('welcomeDismissed', '1');
+    }
+  });
 
   const searchInput = document.getElementById('search-input');
   const searchBtn = document.getElementById('search-btn');

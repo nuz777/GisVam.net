@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GisVam.net - Tienda Online</title>
+    <title>MinaShop - Tienda Online</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -16,7 +16,7 @@
       <div class="header-inner">
         <a href="/" class="logo">
           <svg class="header-logo-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-          GisVam<span>.net</span>
+          MinaShop
         </a>
         <div class="header-search">
           <input type="text" id="header-search-input" placeholder="Buscar productos..." aria-label="Buscar productos">
@@ -65,7 +65,7 @@
     <footer class="footer">
       <div class="footer-inner">
         <div class="footer-brand">
-          <a href="/" class="logo">GisVam<span>.net</span></a>
+          <a href="/" class="logo">MinaShop</a>
           <p>Calidad y confianza en cada compra</p>
         </div>
         <div class="footer-contact">
@@ -88,7 +88,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 GisVam.net — Todos los derechos reservados</p>
+        <p>&copy; 2026 MinaShop — Todos los derechos reservados</p>
       </div>
     </footer>
 
@@ -102,6 +102,27 @@
     </div>
 
     <div class="toast" id="toast"></div>
+
+    <div class="modal-overlay" id="welcome-modal">
+      <div class="modal modal--welcome">
+        <div class="welcome-body">
+          <div class="welcome-img-wrap">
+            <img src="/img/juanmina.webp" alt="MinaShop" class="welcome-img">
+          </div>
+          <h2 class="welcome-title">¡Bienvenido a MinaShop!</h2>
+          <p class="welcome-text">
+            Esto es una <strong>prueba</strong> para la comunidad. Queremos saber qué te parece esta página 
+            y si te gustaría que siga disponible. Puedes dejarnos tus <strong>comentarios en Facebook</strong> 
+            para ayudarnos a mejorar.
+          </p>
+          <p class="welcome-text">
+            Hacemos pedidos con entrega a la puerta de tu casa y 
+            te damos <strong>comprobante</strong> de tu compra.
+          </p>
+          <button class="welcome-btn" id="welcome-close">Eso va</button>
+        </div>
+      </div>
+    </div>
 
     <div class="cart-overlay" id="cart-overlay"></div>
     <div class="cart-panel" id="cart-panel">
