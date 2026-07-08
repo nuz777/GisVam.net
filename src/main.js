@@ -5,6 +5,7 @@ const products = [
   {
     id: 1,
     name: 'Camiseta versátil de moda con estampado de gato de bolsillo',
+    size: 'M',
     originalPrice: 59000,
     price: 35000,
     rating: 4.8,
@@ -18,12 +19,12 @@ const products = [
   },
   {
     id: 2,
-    name: 'Camiseta de manga corta para hombre Dragón',
-    originalPrice: 61900,
-    price: 34900,
+    name: 'Relojes para hombre',
+    originalPrice: 51900,
+    price: 15000,
     rating: 4.6,
     reviewCount: 189,
-    description: 'Camiseta de manga corta con llamativo estampado completo de dragón chino en colores de contraste. Confeccionada en tela suave y fresca, perfecta para el verano. Cuello redondo clásico, mangas cortas con costuras reforzadas y dobladillo duradero. Estilo moderno y versátil que funciona tanto para looks casuales como para ocasiones especiales. Un excelente regalo para los amantes de la cultura asiática y el diseño único. Lavar en frío recomendado.',
+    description: 'Reloj de pulsera para hombre con diseño elegante y moderno. Caja de acero inoxidable resistente al agua, correa ajustable de cuero genuino y movimiento de cuarzo preciso. Ideal para uso diario o eventos formales. Pantalla analógica con marcadores luminosos para fácil lectura en la oscuridad. Incluye garantía limitada de 1 año.',
     images: [
       '/img/camisetas/camiseta3.webp',
       '/img/camisetas/camiseta4.webp',
@@ -32,6 +33,7 @@ const products = [
   {
     id: 3,
     name: 'Camiseta de hombre estilo americano moderno',
+    size: 'M',
     originalPrice: 129900,
     price: 38900,
     rating: 4.7,
@@ -45,12 +47,13 @@ const products = [
   },
   {
     id: 4,
-    name: 'Audifonos inalámbricos con cable',
-    originalPrice: 219900,
+    name: 'Camiseta para mujer con estampado de mariposas vintage',
+    size: 'M',
+    originalPrice: 89900,
     price: 35900,
     rating: 4.5,
     reviewCount: 156,
-    description: 'Reloj inteligente deportivo con pantalla táctil HD a color. Monitoreo las 24 horas de frecuencia cardíaca, oxímetro de sangre (SpO2), análisis de sueño y medición de estrés. Más de 100 modos deportivos incluyendo running, natación, ciclismo y yoga. Resistente al agua IP68. Batería de larga duración hasta 15 días en uso normal. Compatible con Android y iOS. Incluye notificaciones de llamadas, mensajes y redes sociales. Podómetro, calorímetro y recordatorio de actividad sedentaria integrados.',
+    description: 'Camiseta para mujer con estampado de mariposas vintage, confeccionada en algodón orgánico suave y transpirable. Corte entallado que resalta la figura, cuello redondo y mangas cortas. Ideal para combinar con jeans, faldas o pantalones cortos. Disponible en varias tallas y colores pastel. Lavable a máquina sin perder su forma ni color. Diseño ecológico y sostenible, libre de químicos dañinos.',
     images: [
       '/img/tecnologia/image1.webp',
       '/img/tecnologia/image2.webp',
@@ -58,9 +61,10 @@ const products = [
   },
   {
     id: 5,
-    name: 'bocchi Camiseta negra',
+    name: 'Cruces Camiseta negra',
+    size: 'M',
     originalPrice: 79900,
-    price: 33000,
+    price: 36000,
     rating: 4.9,
     reviewCount: 445,
     description: 'Camiseta premium confeccionada en algodón peinado 100% de alta calidad. Tejido de 180 gramos que brinda la combinación perfecta entre suavidad y durabilidad. Corte moderno y entallado que estiliza la figura. Costuras reforzadas en todos los puntos de tensión, cuello ribeteado que mantiene su forma original. Libre de químicos irritantes, hipoalergénica y transpirable. Disponible en múltiples tallas. Resistente a múltiples lavados sin encogerse ni destejerse. Hecha con procesos de producción sostenibles.',
@@ -71,12 +75,13 @@ const products = [
   },
   {
     id: 6,
-    name: 'LCamiseta de estilo de terror anime',
+    name: 'Camiseta Casual de Manga Corta para Mujer',
+    size: 'M',
     originalPrice: 99900,
     price: 30000,
     rating: 4.4,
     reviewCount: 98,
-    description: 'Lámpara LED inteligente con control desde app móvil compatible con iOS y Android. Más de 16 millones de colores para crear el ambiente perfecto en cualquier habitación. Sincronización con música en tiempo real gracias a su micrófono integrado — las luces bailan al ritmo de tu playlist favorita. Modos preestablecidos: lectura, descanso, fiesta y atardecer. Temporizador programable y control por voz compatible con asistentes virtuales. Fácil instalación, solo rosca en un socket estándar E27. Iluminación suave sin parpadeo que cuida tu vista.',
+    description: 'Camiseta casual de manga corta para mujer con diseño moderno y estilo versátil. Confeccionada en tela suave y transpirable, ideal para el día a día. Cuello redondo, mangas cortas y ajuste cómodo. Disponible en múltiples colores y tallas. Lavable a máquina sin perder su forma ni color.',
     images: [
       '/img/camisetas/camiseta10.webp',
       '/img/camisetas/camiseta11.webp',
@@ -84,12 +89,12 @@ const products = [
   },
   {
     id: 7,
-    name: 'Polo de moda de manga corta para hombre',
+    name: 'Bolso negro Clasico para mujer',
     originalPrice: 159900,
     price: 35000,
     rating: 4.7,
     reviewCount: 267,
-    description: 'Kit completo de maquillaje profesional con 48 piezas ideal tanto para principiantes como para expertas. Incluye paleta de 32 sombras con acabados mate, brillante y satinado, 8 labiales de larga duración, 6 brochas profesionales con cerdas suaves y un espejo de bolsillo. Los pigmentos son altamente concentrados para máxima intensidad de color con mínima aplicación. Fórmula hipoalergénica libre de parabenos y fragancias. Estuche compacto con organizador integrado, perfecto para llevar a cualquier lugar. Crea desde looks naturales hasta maquillajes artísticos.',
+    description: 'Bolso negro clásico para mujer, confeccionado en cuero genuino de alta calidad. Diseño elegante y versátil, ideal para ocasiones formales o casuales. Espacio interior amplio con compartimentos organizados. Asas regulables y cierre seguro. Disponible en múltiples colores y tallas. Lavable a máquina sin perder su forma ni color.',
     images: [
       '/img/camisetas/camiseta12.webp',
       '/img/camisetas/camiseta13.webp',
@@ -98,6 +103,7 @@ const products = [
   {
     id: 8,
     name: 'Polo de moda de manga corta para hombre Verde',
+    size: 'M',
     originalPrice: 89900,
     price: 36900,
     rating: 4.6,
@@ -111,16 +117,117 @@ const products = [
 
    {
     id: 9,
-    name: 'Juego de 4 piezas de reloj de acero inoxidable',
-    originalPrice: 89900,
-    price: 17900,
+    name: '10 collares con colgante de moda ',
+    deal: { flashPrice: 5000 },
+    originalPrice: 39900,
+    price: 7000,
     rating: 4.6,
     reviewCount: 203,
-    description: 'Cargador inalámbrico 3 en 1 con diseño compacto y elegante perfecto para tu mesa de noche o escritorio. Carga simultáneamente tu teléfono inteligente (compatible con carga rápida Qi hasta 15W), tus auriculares Bluetooth y tu reloj inteligente. Tecnología de detección inteligente de objetos extraños, protección contra sobrecarga, sobrecalentamiento y cortocircuitos. Base antideslizante con LED indicador de estado. Compatible con todas las fundas delgadas (menos de 5mm). Incluye adaptador de corriente USB-C de 30W. Diseño minimalista que combina con cualquier decoración.',
+    description: 'Set de 10 (5mil la unidad) collares con colgante de moda, ideales para combinar con diferentes estilos y outfits. Cada collar está hecho de aleación de metal de alta calidad, resistente al desgaste y a la corrosión. Los colgantes incluyen diseños variados como corazones, estrellas, lunas y símbolos geométricos. Longitud ajustable para adaptarse a diferentes cuellos. Perfectos para regalar o para uso personal en ocasiones especiales o el día a día.',
     images: [
       '/img/accsesorios/reloj.png',
       '/img/accsesorios/reloj2.webp',
-      '/img/accsesorios/reloj3.png',
+    ],
+  },
+
+  {
+    id: 10,
+    name: 'Conjunto de animadora de top corto ',
+    originalPrice: 49900,
+    price: 35000,
+    rating: 4.6,
+    reviewCount: 203,
+    description: 'Conjunto de animadora de top corto y falda plisada, ideal para disfraces, eventos deportivos o sesiones de fotos. Hecho de poliéster y spandex de alta calidad, suave y elástico para un ajuste cómodo. Top con cuello redondo y mangas cortas, falda con cintura elástica y pliegues que permiten libertad de movimiento. Disponible en varios colores y tallas. Fácil de lavar a mano o a máquina en ciclo delicado.',
+    images: [
+       '/img/camisetas/camiseta16.webp',
+    ],
+  },
+
+
+  {
+    id: 11,
+    name: 'Y2K Camiseta con patrón de letras góticas ',
+    size: 'M',
+    originalPrice: 49900,
+    price: 35000,
+    rating: 4.6,
+    reviewCount: 203,
+    description: 'Y2K Camiseta con patrón de letras góticas, ideal para disfraces, eventos deportivos o sesiones de fotos. Hecho de poliéster y spandex de alta calidad, suave y elástico para un ajuste cómodo. Top con cuello redondo y mangas cortas, falda con cintura elástica y pliegues que permiten libertad de movimiento. Disponible en varios colores y tallas. Fácil de lavar a mano o a máquina en ciclo delicado.',
+    images: [
+       '/img/camisetas/camiseta17.webp',
+       '/img/camisetas/camiseta18.webp',
+    ],
+  },
+
+   {
+    id: 12,
+    name: 'Camiseta de Transferencia Térmica para Hombre ',
+    size: 'M',
+    originalPrice: 49900,
+    price: 32000,
+    rating: 4.6,
+    reviewCount: 203,
+    description: 'Camiseta de Transferencia Térmica para Hombre, ideal para disfraces, eventos deportivos o sesiones de fotos. Hecho de poliéster y spandex de alta calidad, suave y elástico para un ajuste cómodo. Top con cuello redondo y mangas cortas, falda con cintura elástica y pliegues que permiten libertad de movimiento. Disponible en varios colores y tallas. Fácil de lavar a mano o a máquina en ciclo delicado.',
+    images: [
+       '/img/camisetas/camiseta19.webp',
+       '/img/camisetas/camiseta20.webp',
+    ],
+  },
+
+  {
+    id: 13,
+    name: 'Conjunto de 3 camisetas sin tirantes con estampado gótico punk vintage | ',
+    size: 'M',
+    originalPrice: 49900,
+    price: 37000,
+    rating: 4.6,
+    reviewCount: 203,
+    description: 'Conjunto de 3 camisetas sin tirantes con estampado gótico punk vintage, eventos deportivos o sesiones de fotos. Hecho de poliéster y spandex de alta calidad, suave y elástico para un ajuste cómodo. Top con cuello redondo y mangas cortas, falda con cintura elástica y pliegues que permiten libertad de movimiento. Disponible en varios colores y tallas. Fácil de lavar a mano o a máquina en ciclo delicado.',
+    images: [
+       '/img/camisetas/camiseta21.webp',
+       '/img/camisetas/camiseta22.webp',
+    ],
+  },
+
+
+  {
+    id: 14,
+    name: '10 Pares/Set de Aretes de Aleación de Moda Mariposa',
+    originalPrice: 49900,
+    price: 17000,
+    rating: 4.6,
+    reviewCount: 203,
+    description: '10 Pares/Set de Aretes de Aleación de Moda Mariposa, lor de Rosa, Cruz, Diseño de Corazones, Joyería Regalo para Damas y Niñas',
+    images: [
+       '/img/camisetas/camiseta23.webp',
+    ],
+  },
+
+   {
+    id: 15,
+    name: 'Top halter con decoración de estrella de mar',
+    originalPrice: 69900,
+    price: 35000,
+    rating: 4.6,
+    reviewCount: 203,
+    description: 'Top halter con decoración de estrella de mar, ideal para disfraces, eventos deportivos o sesiones de fotos. Hecho de poliéster y spandex de alta calidad, suave y elástico para un ajuste cómodo. Top con cuello redondo y mangas cortas, falda con cintura elástica y pliegues que permiten libertad de movimiento. Disponible en varios colores y tallas. Fácil de lavar a mano o a máquina en ciclo delicado.',
+    images: [
+       '/img/camisetas/camiseta24.webp',
+       '/img/camisetas/camiseta25.webp',
+    ],
+  },
+
+   {
+    id: 16,
+    name: 'Top sin espalda con cuello ',
+    originalPrice: 69900,
+    price: 30000,
+    rating: 4.6,
+    reviewCount: 203,
+    description: 'Top sin espalda con cuello redondo',
+    images: [
+       '/img/camisetas/camiseta26.webp',
+       '/img/camisetas/camiseta27.webp',
     ],
   },
 ];
@@ -238,6 +345,26 @@ function calcDiscount(original, current) {
   return Math.round((1 - current / original) * 100);
 }
 
+function getSecondsToMidnight() {
+  const now = new Date();
+  return Math.floor((24 * 60 * 60 - (now.getHours() * 3600 + now.getMinutes() * 60 + now.getSeconds())));
+}
+
+function formatCountdown(totalSec) {
+  const h = String(Math.floor(totalSec / 3600)).padStart(2, '0');
+  const m = String(Math.floor((totalSec % 3600) / 60)).padStart(2, '0');
+  const s = String(totalSec % 60).padStart(2, '0');
+  return `${h}:${m}:${s}`;
+}
+
+function updateDealTimers() {
+  const secs = getSecondsToMidnight();
+  const text = formatCountdown(secs);
+  document.querySelectorAll('.deal-timer-display').forEach((el) => {
+    el.textContent = text;
+  });
+}
+
 function renderStars(rating) {
   let html = '<span class="stars">';
   for (let i = 1; i <= 5; i++) {
@@ -262,7 +389,7 @@ function renderProducts(list) {
     .map(
       (p) => `
       <div class="product-card" data-id="${p.id}">
-        <span class="discount-badge">-${calcDiscount(p.originalPrice, p.price)}%</span>
+        <span class="discount-badge">-${calcDiscount(p.originalPrice, p.deal ? p.deal.flashPrice : p.price)}%</span>
         <div class="carousel" data-product-id="${p.id}">
           <div class="carousel-track" id="track-${p.id}">
             ${p.images
@@ -290,13 +417,27 @@ function renderProducts(list) {
             : ''}
         </div>
         <div class="product-info">
+          ${p.deal ? `
+          <div class="deal-banner deal-banner--card">
+            <div class="deal-head">
+              <span class="deal-icon">🔥</span>
+              <span class="deal-label">HOY</span>
+              <span class="deal-flash-price">${formatPrice(p.deal.flashPrice)}</span>
+            </div>
+            <div class="deal-timer" data-timer-id="${p.id}">
+              <span class="deal-timer-label">Termina en</span>
+              <span class="deal-timer-display" id="timer-${p.id}">--:--:--</span>
+            </div>
+          </div>
+          ` : ''}
           <h3 class="product-name">${p.name}</h3>
           <p class="product-description">${p.description}</p>
+          ${p.size ? `<div class="size-badge">Talla ${p.size}</div>` : ''}
           <div class="product-rating">${renderStars(p.rating)} <span class="rating-count">(${p.reviewCount})</span></div>
           <div class="product-pricing">
-            <span class="product-price">${formatPrice(p.price)}</span>
+            <span class="product-price${p.deal ? ' deal-price' : ''}">${formatPrice(p.deal ? p.deal.flashPrice : p.price)}</span>
             <span class="product-original-price">${formatPrice(p.originalPrice)}</span>
-            <span class="product-discount-text">-${calcDiscount(p.originalPrice, p.price)}%</span>
+            <span class="product-discount-text">-${calcDiscount(p.originalPrice, p.deal ? p.deal.flashPrice : p.price)}%</span>
           </div>
           <div class="product-actions">
             <button class="buy-btn" data-buy="${p.id}">Comprar ahora</button>
@@ -440,12 +581,26 @@ function openBuyModal(product) {
     </div>
     <div class="modal-content">
       <h2 class="modal-product-name">${product.name}</h2>
+      ${product.size ? `<div class="size-badge">Talla ${product.size}</div>` : ''}
       <div class="modal-rating">${renderStars(product.rating)} <span class="rating-count">${product.rating} (${product.reviewCount} reseñas)</span></div>
       <div class="modal-pricing">
-        <span class="modal-product-price">${formatPrice(product.price)}</span>
+        <span class="modal-product-price${product.deal ? ' deal-price' : ''}">${formatPrice(product.deal ? product.deal.flashPrice : product.price)}</span>
         <span class="modal-original-price">${formatPrice(product.originalPrice)}</span>
-        <span class="modal-discount-text">-${calcDiscount(product.originalPrice, product.price)}%</span>
+        <span class="modal-discount-text">-${calcDiscount(product.originalPrice, product.deal ? product.deal.flashPrice : product.price)}%</span>
       </div>
+      ${product.deal ? `
+      <div class="deal-banner" style="margin-bottom:14px">
+        <div class="deal-head">
+          <span class="deal-icon">🔥</span>
+          <span class="deal-label">HOY</span>
+          <span class="deal-flash-price">${formatPrice(product.deal.flashPrice)}</span>
+        </div>
+        <div class="deal-timer" data-timer-id="${product.id}">
+          <span class="deal-timer-label">Termina en</span>
+          <span class="deal-timer-display" id="timer-${product.id}">--:--:--</span>
+        </div>
+      </div>
+      ` : ''}
       <p class="modal-product-description">${product.description}</p>
 
       <div class="modal-divider"></div>
@@ -553,6 +708,8 @@ function closeModal() {
 
 document.addEventListener('DOMContentLoaded', () => {
   renderProducts();
+  updateDealTimers();
+  setInterval(updateDealTimers, 1000);
 
   const searchInput = document.getElementById('search-input');
   const searchBtn = document.getElementById('search-btn');
