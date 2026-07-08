@@ -164,6 +164,19 @@ body {
   color: var(--blue-500);
 }
 
+.cart-btn.cart-bounce {
+  animation: cartBounce 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes cartBounce {
+  0%, 100% { transform: scale(1); }
+  15% { transform: scale(1.2); }
+  30% { transform: scale(0.9); }
+  45% { transform: scale(1.1); }
+  60% { transform: scale(0.95); }
+  75% { transform: scale(1.05); }
+}
+
 .cart-badge {
   position: absolute;
   top: -2px;
@@ -1360,6 +1373,9 @@ body {
   opacity: 0;
   transition: all 0.3s;
   pointer-events: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .toast.show {
@@ -1369,6 +1385,23 @@ body {
 
 .toast.success {
   background: #34a853;
+}
+
+.toast-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  animation: toastPop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes toastPop {
+  0% { transform: scale(0); }
+  100% { transform: scale(1); }
 }
 
 /* ===== FOOTER ===== */

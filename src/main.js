@@ -237,7 +237,18 @@ const products = [
   },
 ];
 
-let cart = [];
+function loadCart() {
+  try {
+    const data = localStorage.getItem('minaShop_cart');
+    return data ? JSON.parse(data) : [];
+  } catch { return []; }
+}
+
+function saveCart() {
+  localStorage.setItem('minaShop_cart', JSON.stringify(cart));
+}
+
+let cart = loadCart();
 
 function formatPrice(amount) {
   return '$' + amount.toLocaleString('es-CO');
@@ -252,6 +263,11 @@ function addToCart(productId) {
   }
   updateCartBadge();
   renderCart();
+  saveCart();
+  const cartBtn = document.getElementById('cart-btn');
+  cartBtn.classList.remove('cart-bounce');
+  void cartBtn.offsetWidth;
+  cartBtn.classList.add('cart-bounce');
   showToast('Producto agregado al carrito', 'success');
 }
 
@@ -259,6 +275,7 @@ function removeFromCart(productId) {
   cart = cart.filter((item) => item.productId !== productId);
   updateCartBadge();
   renderCart();
+  saveCart();
 }
 
 function updateCartQuantity(productId, delta) {
@@ -271,6 +288,7 @@ function updateCartQuantity(productId, delta) {
   }
   updateCartBadge();
   renderCart();
+  saveCart();
 }
 
 function getCartTotal() {
@@ -542,6 +560,7 @@ function bindBuyEvents() {
   });
 
   document.getElementById('products-grid').addEventListener('click', (e) => {
+    if (e.target.closest('button')) return;
     const card = e.target.closest('.product-card');
     if (!card) return;
     const id = Number(card.dataset.id);
@@ -823,7 +842,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function showToast(message, type) {
   const toast = document.getElementById('toast');
-  toast.textContent = message;
   toast.className = 'toast show' + (type === 'success' ? ' success' : '');
+  toast.innerHTML = type === 'success'
+    ? '<span class="toast-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>' + message
+    : message;
   setTimeout(() => toast.classList.remove('show'), 3000);
 }
