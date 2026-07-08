@@ -464,6 +464,49 @@ body {
   line-height: 1.3;
 }
 
+@media (max-width: 480px) {
+  .deal-banner {
+    flex-wrap: wrap;
+    padding: 8px 10px;
+    gap: 4px;
+  }
+  .deal-flash-price {
+    font-size: 14px;
+    padding: 0 6px;
+  }
+  .deal-timer {
+    padding: 3px 8px;
+  }
+  .deal-timer-display {
+    font-size: 13px;
+  }
+  .deal-timer-label {
+    font-size: 8px;
+  }
+  .deal-label {
+    font-size: 11px;
+  }
+  .deal-icon {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .deal-banner--card {
+    margin: -12px -14px 8px;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    gap: 4px;
+  }
+  .deal-banner--card .deal-head {
+    justify-content: center;
+  }
+  .deal-banner--card .deal-timer {
+    justify-content: center;
+  }
+}
+
 .deal-timer {
   display: flex;
   align-items: center;
