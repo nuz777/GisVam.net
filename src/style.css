@@ -813,10 +813,23 @@ body {
   max-height: 90vh;
   overflow-y: auto;
   box-shadow: var(--shadow-lg);
-  padding: 32px;
+  padding: 0;
   position: relative;
   transform: scale(0.95) translateY(10px);
   transition: transform 0.25s;
+}
+
+#buy-modal .modal-body {
+  display: flex;
+  flex-direction: column;
+}
+
+#buy-modal .modal-gallery {
+  flex-shrink: 0;
+}
+
+#buy-modal .modal-content {
+  padding: 20px;
 }
 
 .modal-overlay.open .modal {
@@ -829,21 +842,22 @@ body {
     padding: 40px;
   }
 
-  .modal-body {
-    display: flex;
+  #buy-modal .modal-body {
+    flex-direction: row;
     gap: 32px;
     align-items: flex-start;
   }
 
-  .modal-body .modal-gallery {
+  #buy-modal .modal-gallery {
     flex: 0 0 320px;
     position: sticky;
     top: 0;
   }
 
-  .modal-body .modal-content {
+  #buy-modal .modal-content {
     flex: 1;
     min-width: 0;
+    padding: 0;
   }
 }
 
