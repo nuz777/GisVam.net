@@ -141,7 +141,7 @@ async function fetchGitHubProducts() {
   }
   if (!res.ok) throw new Error('Error al cargar desde GitHub');
   const data = await res.json();
-  return { products: JSON.parse(atob(data.content)), sha: data.sha };
+  return { products: JSON.parse(decodeURIComponent(escape(atob(data.content)))), sha: data.sha };
 }
 
 async function loadAdminProducts() {
