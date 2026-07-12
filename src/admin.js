@@ -5,7 +5,6 @@ const GITHUB_FILE = 'public/products.json';
 let adminToken = localStorage.getItem('minashop_admin_token');
 let logoTapCount = 0;
 let logoTapTimer = null;
-let logoNavTimeout = null;
 let adminProducts = [];
 let adminSha = null;
 
@@ -16,15 +15,11 @@ function initAdminTap() {
       e.stopPropagation();
       logoTapCount++;
       clearTimeout(logoTapTimer);
-      clearTimeout(logoNavTimeout);
       logoTapTimer = setTimeout(() => { logoTapCount = 0; }, 5000);
 
       if (logoTapCount >= 6) {
         logoTapCount = 0;
         openAdmin();
-      } else {
-        const href = logo.getAttribute('href') || '/';
-        logoNavTimeout = setTimeout(() => { window.location.href = href; }, 300);
       }
     }, true);
   });
