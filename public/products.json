@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1783882467448,
+    "name": "dgrrgrg",
+    "description": "rgrgdg",
+    "originalPrice": 300000,
+    "price": 19998,
+    "rating": 4.5,
+    "reviewCount": 900000,
+    "images": [
+      "https://img.kwcdn.com/product/open/8176451ceb2d42d390cb57f3358e90be-goods.jpeg?imageView2/2/w/800/q/70/format/avif"
+    ],
+    "deal": {
+      "flashPrice": -2
+    }
+  }
+]
