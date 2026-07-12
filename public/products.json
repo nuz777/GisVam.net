@@ -1,21 +1,21 @@
 [
   {
     "id": 1,
-    "name": "Camiseta versÃÂ¡til de moda con estampado de gato de bolsillo",
-    "size": "M",
-    "deal": {
-      "flashPrice": 35000
-    },
+    "name": "Camiseta versatil de moda con estampado de gato de bolsillo",
+    "description": "Camiseta de alta calidad con estampado ÃÂÃÂºnico de gatito en el bolsillo frontal. Confeccionada en algodÃÂÃÂ³n suave y transpirable, ideal para el dÃÂÃÂ­a a dÃÂÃÂ­a. Cuello redondo reforzado, costuras resistentes y corte recto que favorece todo tipo de cuerpo. FÃÂÃÂ¡cil de combinar con jeans, shorts o faldas. Disponible en varias tallas. Lavable a mÃÂÃÂ¡quina sin perder su forma ni color.",
     "originalPrice": 59000,
     "price": 35000,
     "rating": 4.8,
     "reviewCount": 234,
-    "description": "Camiseta de alta calidad con estampado ÃÂºnico de gatito en el bolsillo frontal. Confeccionada en algodÃÂ³n suave y transpirable, ideal para el dÃÂ­a a dÃÂ­a. Cuello redondo reforzado, costuras resistentes y corte recto que favorece todo tipo de cuerpo. FÃÂ¡cil de combinar con jeans, shorts o faldas. Disponible en varias tallas. Lavable a mÃÂ¡quina sin perder su forma ni color.",
     "images": [
       "/img/camisetas/image.webp",
       "/img/camisetas/camiseta.webp",
       "/img/camisetas/camiseta2.webp"
-    ]
+    ],
+    "size": "M",
+    "deal": {
+      "flashPrice": 35000
+    }
   },
   {
     "id": 2,
@@ -24,7 +24,7 @@
     "price": 15000,
     "rating": 4.6,
     "reviewCount": 189,
-    "description": "Reloj de pulsera para hombre con diseÃÂ±o elegante y moderno. Caja de acero inoxidable resistente al agua, correa ajustable de cuero genuino y movimiento de cuarzo preciso. Ideal para uso diario o eventos formales. Pantalla analÃÂ³gica con marcadores luminosos para fÃÂ¡cil lectura en la oscuridad. Incluye garantÃÂ­a limitada de 1 aÃÂ±o.",
+    "description": "Reloj de pulsera para hombre con diseÃÂÃÂ±o elegante y moderno. Caja de acero inoxidable resistente al agua, correa ajustable de cuero genuino y movimiento de cuarzo preciso. Ideal para uso diario o eventos formales. Pantalla analÃÂÃÂ³gica con marcadores luminosos para fÃÂÃÂ¡cil lectura en la oscuridad. Incluye garantÃÂÃÂ­a limitada de 1 aÃÂÃÂ±o.",
     "images": [
       "/img/camisetas/camiseta4n.webp",
       "/img/camisetas/camiseta3.webp",
@@ -39,7 +39,7 @@
     "price": 38900,
     "rating": 4.7,
     "reviewCount": 312,
-    "description": "Camiseta de hombre con estilo americano moderno, diseÃÂ±o minimalista y corte contemporÃÂ¡neo. Confeccionada en algodÃÂ³n premium de alta gramaje para mayor durabilidad y confort. Costuras dobles en mangas y laterales, cuello reforzado que no se deforma con los lavados. Ideal para uso diario, oficina o salidas casuales. Disponible en varios colores clÃÂ¡sicos. Tela anti-pilling que mantiene su aspecto impecable lavado tras lavado.",
+    "description": "Camiseta de hombre con estilo americano moderno, diseÃÂÃÂ±o minimalista y corte contemporÃÂÃÂ¡neo. Confeccionada en algodÃÂÃÂ³n premium de alta gramaje para mayor durabilidad y confort. Costuras dobles en mangas y laterales, cuello reforzado que no se deforma con los lavados. Ideal para uso diario, oficina o salidas casuales. Disponible en varios colores clÃÂÃÂ¡sicos. Tela anti-pilling que mantiene su aspecto impecable lavado tras lavado.",
     "images": [
       "/img/camisetas/camiseta5.webp",
       "/img/camisetas/camiseta6.webp",
@@ -54,7 +54,7 @@
     "price": 35900,
     "rating": 4.5,
     "reviewCount": 156,
-    "description": "Camiseta para mujer con estampado de mariposas vintage, confeccionada en algodÃÂ³n orgÃÂ¡nico suave y transpirable. Corte entallado que resalta la figura, cuello redondo y mangas cortas. Ideal para combinar con jeans, faldas o pantalones cortos. Disponible en varias tallas y colores pastel. Lavable a mÃÂ¡quina sin perder su forma ni color. DiseÃÂ±o ecolÃÂ³gico y sostenible, libre de quÃÂ­micos daÃÂ±inos.",
+    "description": "Camiseta para mujer con estampado de mariposas vintage, confeccionada en algodÃÂÃÂ³n orgÃÂÃÂ¡nico suave y transpirable. Corte entallado que resalta la figura, cuello redondo y mangas cortas. Ideal para combinar con jeans, faldas o pantalones cortos. Disponible en varias tallas y colores pastel. Lavable a mÃÂÃÂ¡quina sin perder su forma ni color. DiseÃÂÃÂ±o ecolÃÂÃÂ³gico y sostenible, libre de quÃÂÃÂ­micos daÃÂÃÂ±inos.",
     "images": [
       "/img/tecnologia/image1.webp",
       "/img/tecnologia/image2.webp"
@@ -71,7 +71,7 @@
     "price": 36000,
     "rating": 4.9,
     "reviewCount": 445,
-    "description": "Camiseta premium confeccionada en algodÃÂ³n peinado 100% de alta calidad. Tejido de 180 gramos que brinda la combinaciÃÂ³n perfecta entre suavidad y durabilidad. Corte moderno y entallado que estiliza la figura. Costuras reforzadas en todos los puntos de tensiÃÂ³n, cuello ribeteado que mantiene su forma original. Libre de quÃÂ­micos irritantes, hipoalergÃÂ©nica y transpirable. Disponible en mÃÂºltiples tallas. Resistente a mÃÂºltiples lavados sin encogerse ni destejerse. Hecha con procesos de producciÃÂ³n sostenibles.",
+    "description": "Camiseta premium confeccionada en algodÃÂÃÂ³n peinado 100% de alta calidad. Tejido de 180 gramos que brinda la combinaciÃÂÃÂ³n perfecta entre suavidad y durabilidad. Corte moderno y entallado que estiliza la figura. Costuras reforzadas en todos los puntos de tensiÃÂÃÂ³n, cuello ribeteado que mantiene su forma original. Libre de quÃÂÃÂ­micos irritantes, hipoalergÃÂÃÂ©nica y transpirable. Disponible en mÃÂÃÂºltiples tallas. Resistente a mÃÂÃÂºltiples lavados sin encogerse ni destejerse. Hecha con procesos de producciÃÂÃÂ³n sostenibles.",
     "images": [
       "/img/camisetas/camiseta8.webp",
       "/img/camisetas/camiseta9.webp"
@@ -85,7 +85,7 @@
     "price": 30000,
     "rating": 4.4,
     "reviewCount": 98,
-    "description": "Camiseta casual de manga corta para mujer con diseÃÂ±o moderno y estilo versÃÂ¡til. Confeccionada en tela suave y transpirable, ideal para el dÃÂ­a a dÃÂ­a. Cuello redondo, mangas cortas y ajuste cÃÂ³modo. Disponible en mÃÂºltiples colores y tallas. Lavable a mÃÂ¡quina sin perder su forma ni color.",
+    "description": "Camiseta casual de manga corta para mujer con diseÃÂÃÂ±o moderno y estilo versÃÂÃÂ¡til. Confeccionada en tela suave y transpirable, ideal para el dÃÂÃÂ­a a dÃÂÃÂ­a. Cuello redondo, mangas cortas y ajuste cÃÂÃÂ³modo. Disponible en mÃÂÃÂºltiples colores y tallas. Lavable a mÃÂÃÂ¡quina sin perder su forma ni color.",
     "images": [
       "/img/camisetas/camiseta10.webp",
       "/img/camisetas/camiseta11.webp"
@@ -98,7 +98,7 @@
     "price": 35000,
     "rating": 4.7,
     "reviewCount": 267,
-    "description": "Bolso negro clÃÂ¡sico para mujer, confeccionado en cuero genuino de alta calidad. DiseÃÂ±o elegante y versÃÂ¡til, ideal para ocasiones formales o casuales. Espacio interior amplio con compartimentos organizados. Asas regulables y cierre seguro. Disponible en mÃÂºltiples colores y tallas. FÃÂ¡cil de limpiar con un paÃÂ±o hÃÂºmedo para mantener su aspecto impecable.",
+    "description": "Bolso negro clÃÂÃÂ¡sico para mujer, confeccionado en cuero genuino de alta calidad. DiseÃÂÃÂ±o elegante y versÃÂÃÂ¡til, ideal para ocasiones formales o casuales. Espacio interior amplio con compartimentos organizados. Asas regulables y cierre seguro. Disponible en mÃÂÃÂºltiples colores y tallas. FÃÂÃÂ¡cil de limpiar con un paÃÂÃÂ±o hÃÂÃÂºmedo para mantener su aspecto impecable.",
     "images": [
       "/img/camisetas/camiseta12.webp",
       "/img/camisetas/camiseta13.webp"
@@ -112,7 +112,7 @@
     "price": 36900,
     "rating": 4.6,
     "reviewCount": 203,
-    "description": "Polo de manga corta para hombre en color verde, con diseÃÂ±o clÃÂ¡sico y moderno. Confeccionado en algodÃÂ³n fresco y transpirable, ideal para uso diario o eventos casuales. Cuello tipo polo con botones, mangas cortas y corte recto que brinda comodidad. FÃÂ¡cil de combinar con jeans, pantalones de vestir o shorts. Disponible en varias tallas. Lavable a mÃÂ¡quina sin perder su forma ni color.",
+    "description": "Polo de manga corta para hombre en color verde, con diseÃÂÃÂ±o clÃÂÃÂ¡sico y moderno. Confeccionado en algodÃÂÃÂ³n fresco y transpirable, ideal para uso diario o eventos casuales. Cuello tipo polo con botones, mangas cortas y corte recto que brinda comodidad. FÃÂÃÂ¡cil de combinar con jeans, pantalones de vestir o shorts. Disponible en varias tallas. Lavable a mÃÂÃÂ¡quina sin perder su forma ni color.",
     "images": [
       "/img/camisetas/camiseta14.webp",
       "/img/camisetas/camiseta15.webp"
@@ -128,7 +128,7 @@
     "price": 7000,
     "rating": 4.6,
     "reviewCount": 203,
-    "description": "Set de 10 (5mil la unidad) collares con colgante de moda, ideales para combinar con diferentes estilos y outfits. Cada collar estÃÂ¡ hecho de aleaciÃÂ³n de metal de alta calidad, resistente al desgaste y a la corrosiÃÂ³n. Los colgantes incluyen diseÃÂ±os variados como corazones, estrellas, lunas y sÃÂ­mbolos geomÃÂ©tricos. Longitud ajustable para adaptarse a diferentes cuellos. Perfectos para regalar o para uso personal en ocasiones especiales o el dÃÂ­a a dÃÂ­a.",
+    "description": "Set de 10 (5mil la unidad) collares con colgante de moda, ideales para combinar con diferentes estilos y outfits. Cada collar estÃÂÃÂ¡ hecho de aleaciÃÂÃÂ³n de metal de alta calidad, resistente al desgaste y a la corrosiÃÂÃÂ³n. Los colgantes incluyen diseÃÂÃÂ±os variados como corazones, estrellas, lunas y sÃÂÃÂ­mbolos geomÃÂÃÂ©tricos. Longitud ajustable para adaptarse a diferentes cuellos. Perfectos para regalar o para uso personal en ocasiones especiales o el dÃÂÃÂ­a a dÃÂÃÂ­a.",
     "images": [
       "/img/accsesorios/reloj.png",
       "/img/accsesorios/reloj2.webp"
@@ -141,7 +141,7 @@
     "price": 35000,
     "rating": 4.6,
     "reviewCount": 203,
-    "description": "Conjunto de animadora de top corto y falda plisada, ideal para disfraces, eventos deportivos o sesiones de fotos. Hecho de poliÃÂ©ster y spandex de alta calidad, suave y elÃÂ¡stico para un ajuste cÃÂ³modo. Top con cuello redondo y mangas cortas, falda con cintura elÃÂ¡stica y pliegues que permiten libertad de movimiento. Disponible en varios colores y tallas. FÃÂ¡cil de lavar a mano o a mÃÂ¡quina en ciclo delicado.",
+    "description": "Conjunto de animadora de top corto y falda plisada, ideal para disfraces, eventos deportivos o sesiones de fotos. Hecho de poliÃÂÃÂ©ster y spandex de alta calidad, suave y elÃÂÃÂ¡stico para un ajuste cÃÂÃÂ³modo. Top con cuello redondo y mangas cortas, falda con cintura elÃÂÃÂ¡stica y pliegues que permiten libertad de movimiento. Disponible en varios colores y tallas. FÃÂÃÂ¡cil de lavar a mano o a mÃÂÃÂ¡quina en ciclo delicado.",
     "images": [
       "/img/camisetas/camiseta16.webp",
       "/img/camisetas/camiseta16n1.webp",
@@ -150,13 +150,13 @@
   },
   {
     "id": 11,
-    "name": "Y2K Camiseta con patrÃÂ³n de letras gÃÂ³ticas",
+    "name": "Y2K Camiseta con patrÃÂÃÂ³n de letras gÃÂÃÂ³ticas",
     "size": "M",
     "originalPrice": 49900,
     "price": 35000,
     "rating": 4.6,
     "reviewCount": 203,
-    "description": "Camiseta Y2K con patrÃÂ³n de letras gÃÂ³ticas, ideal para un look urbano y alternativo. Confeccionada en poliÃÂ©ster y spandex de alta calidad, suave y elÃÂ¡stica para un ajuste cÃÂ³modo. Cuello redondo, mangas cortas y corte recto que estiliza la figura. Perfecta para combinar con jeans, faldas o pantalones cargo. Disponible en varios colores y tallas. FÃÂ¡cil de lavar a mano o a mÃÂ¡quina en ciclo delicado.",
+    "description": "Camiseta Y2K con patrÃÂÃÂ³n de letras gÃÂÃÂ³ticas, ideal para un look urbano y alternativo. Confeccionada en poliÃÂÃÂ©ster y spandex de alta calidad, suave y elÃÂÃÂ¡stica para un ajuste cÃÂÃÂ³modo. Cuello redondo, mangas cortas y corte recto que estiliza la figura. Perfecta para combinar con jeans, faldas o pantalones cargo. Disponible en varios colores y tallas. FÃÂÃÂ¡cil de lavar a mano o a mÃÂÃÂ¡quina en ciclo delicado.",
     "images": [
       "/img/camisetas/camiseta17.webp",
       "/img/camisetas/camiseta18.webp"
@@ -164,13 +164,13 @@
   },
   {
     "id": 12,
-    "name": "Camiseta de Transferencia TÃÂ©rmica para Hombre",
+    "name": "Camiseta de Transferencia TÃÂÃÂ©rmica para Hombre",
     "size": "M",
     "originalPrice": 49900,
     "price": 32000,
     "rating": 4.6,
     "reviewCount": 203,
-    "description": "Camiseta de transferencia tÃÂ©rmica para hombre con estampado moderno de alta duraciÃÂ³n. Confeccionada en poliÃÂ©ster y spandex de alta calidad, suave y elÃÂ¡stica para un ajuste cÃÂ³modo. Cuello redondo, mangas cortas y corte atlÃÂ©tico que se adapta al cuerpo. Ideal para uso diario, entrenamiento o eventos casuales. Disponible en varios colores y tallas. FÃÂ¡cil de lavar a mano o a mÃÂ¡quina en ciclo delicado.",
+    "description": "Camiseta de transferencia tÃÂÃÂ©rmica para hombre con estampado moderno de alta duraciÃÂÃÂ³n. Confeccionada en poliÃÂÃÂ©ster y spandex de alta calidad, suave y elÃÂÃÂ¡stica para un ajuste cÃÂÃÂ³modo. Cuello redondo, mangas cortas y corte atlÃÂÃÂ©tico que se adapta al cuerpo. Ideal para uso diario, entrenamiento o eventos casuales. Disponible en varios colores y tallas. FÃÂÃÂ¡cil de lavar a mano o a mÃÂÃÂ¡quina en ciclo delicado.",
     "images": [
       "/img/camisetas/camiseta19.webp",
       "/img/camisetas/camiseta20.webp"
@@ -178,13 +178,13 @@
   },
   {
     "id": 13,
-    "name": "Conjunto de 3 camisetas sin tirantes con estampado gÃÂ³tico punk vintage",
+    "name": "Conjunto de 3 camisetas sin tirantes con estampado gÃÂÃÂ³tico punk vintage",
     "size": "M",
     "originalPrice": 49900,
     "price": 37000,
     "rating": 4.6,
     "reviewCount": 203,
-    "description": "Lote de 3 camisetas sin tirantes con estampado gÃÂ³tico punk vintage, perfectas para un estilo alternativo y audaz. Confeccionadas en poliÃÂ©ster y spandex de alta calidad, suaves y elÃÂ¡sticas para un ajuste cÃÂ³modo. DiseÃÂ±o sin tirantes con corte recto que permite libertad de movimiento. Ideales para combinar con jeans, chaquetas o faldas. Disponibles en varios colores y tallas. FÃÂ¡ciles de lavar a mano o a mÃÂ¡quina en ciclo delicado.",
+    "description": "Lote de 3 camisetas sin tirantes con estampado gÃÂÃÂ³tico punk vintage, perfectas para un estilo alternativo y audaz. Confeccionadas en poliÃÂÃÂ©ster y spandex de alta calidad, suaves y elÃÂÃÂ¡sticas para un ajuste cÃÂÃÂ³modo. DiseÃÂÃÂ±o sin tirantes con corte recto que permite libertad de movimiento. Ideales para combinar con jeans, chaquetas o faldas. Disponibles en varios colores y tallas. FÃÂÃÂ¡ciles de lavar a mano o a mÃÂÃÂ¡quina en ciclo delicado.",
     "images": [
       "/img/camisetas/camiseta21.webp",
       "/img/camisetas/camiseta22.webp"
@@ -192,24 +192,24 @@
   },
   {
     "id": 14,
-    "name": "10 Pares/Set de Aretes de AleaciÃÂ³n de Moda Mariposa",
+    "name": "10 Pares/Set de Aretes de AleaciÃÂÃÂ³n de Moda Mariposa",
     "originalPrice": 49900,
     "price": 17000,
     "rating": 4.6,
     "reviewCount": 203,
-    "description": "Set de 10 pares de aretes de aleaciÃÂ³n de moda con diseÃÂ±os variados: mariposa, rosa, cruz, corazones y mÃÂ¡s. JoyerÃÂ­a ligera y resistente, ideal para regalo para damas y niÃÂ±as. Perfectos para combinar con diferentes estilos y outfits del dÃÂ­a a dÃÂ­a o para ocasiones especiales.",
+    "description": "Set de 10 pares de aretes de aleaciÃÂÃÂ³n de moda con diseÃÂÃÂ±os variados: mariposa, rosa, cruz, corazones y mÃÂÃÂ¡s. JoyerÃÂÃÂ­a ligera y resistente, ideal para regalo para damas y niÃÂÃÂ±as. Perfectos para combinar con diferentes estilos y outfits del dÃÂÃÂ­a a dÃÂÃÂ­a o para ocasiones especiales.",
     "images": [
       "/img/camisetas/camiseta23.webp"
     ]
   },
   {
     "id": 15,
-    "name": "Top halter con decoraciÃÂ³n de estrella de mar",
+    "name": "Top halter con decoraciÃÂÃÂ³n de estrella de mar",
     "originalPrice": 69900,
     "price": 35000,
     "rating": 4.6,
     "reviewCount": 203,
-    "description": "Top halter con decoraciÃÂ³n de estrella de mar, ideal para looks playeros, veraniegos o sesiones de fotos. Confeccionado en poliÃÂ©ster y spandex de alta calidad, suave y elÃÂ¡stico para un ajuste cÃÂ³modo. DiseÃÂ±o halter con cuello en V y espalda descubierta que realza la figura. Disponible en varios colores y tallas. FÃÂ¡cil de lavar a mano o a mÃÂ¡quina en ciclo delicado.",
+    "description": "Top halter con decoraciÃÂÃÂ³n de estrella de mar, ideal para looks playeros, veraniegos o sesiones de fotos. Confeccionado en poliÃÂÃÂ©ster y spandex de alta calidad, suave y elÃÂÃÂ¡stico para un ajuste cÃÂÃÂ³modo. DiseÃÂÃÂ±o halter con cuello en V y espalda descubierta que realza la figura. Disponible en varios colores y tallas. FÃÂÃÂ¡cil de lavar a mano o a mÃÂÃÂ¡quina en ciclo delicado.",
     "images": [
       "/img/camisetas/camiseta24.webp",
       "/img/camisetas/camiseta25.webp"
@@ -222,7 +222,7 @@
     "price": 30000,
     "rating": 4.6,
     "reviewCount": 203,
-    "description": "Top sin espalda con cuello redondo, ideal para looks modernos y atrevidos. Confeccionado en tela suave y elÃÂ¡stica que se adapta al cuerpo cÃÂ³modamente. DiseÃÂ±o de espalda descubierta que aporta un toque sensual y fresco. Perfecto para combinar con jeans, faldas o pantalones de tiro alto. Disponible en varios colores y tallas.",
+    "description": "Top sin espalda con cuello redondo, ideal para looks modernos y atrevidos. Confeccionado en tela suave y elÃÂÃÂ¡stica que se adapta al cuerpo cÃÂÃÂ³modamente. DiseÃÂÃÂ±o de espalda descubierta que aporta un toque sensual y fresco. Perfecto para combinar con jeans, faldas o pantalones de tiro alto. Disponible en varios colores y tallas.",
     "images": [
       "/img/camisetas/camiseta26.webp",
       "/img/camisetas/camiseta27.webp"
