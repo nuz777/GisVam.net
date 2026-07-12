@@ -1,241 +1,18 @@
 const NEQUI_NUMBER = '304 606 81 13';
 const WHATSAPP_NUMBER = '573046068113';
 
-const products = [
-  {
-    id: 1,
-    name: 'Camiseta versátil de moda con estampado de gato de bolsillo',
-    size: 'M',
-      deal: { flashPrice: 35000 },
-    originalPrice: 59000,
-    price: 35000,
-    rating: 4.8,
-    reviewCount: 234,
-    description: 'Camiseta de alta calidad con estampado único de gatito en el bolsillo frontal. Confeccionada en algodón suave y transpirable, ideal para el día a día. Cuello redondo reforzado, costuras resistentes y corte recto que favorece todo tipo de cuerpo. Fácil de combinar con jeans, shorts o faldas. Disponible en varias tallas. Lavable a máquina sin perder su forma ni color.',
-    images: [
-      '/img/camisetas/image.webp',
-      '/img/camisetas/camiseta.webp',
-      '/img/camisetas/camiseta2.webp',
-    ],
-  },
-  {
-    id: 2,
-    name: 'Relojes para hombre',
-    originalPrice: 51900,
-    price: 15000,
-    rating: 4.6,
-    reviewCount: 189,
-    description: 'Reloj de pulsera para hombre con diseño elegante y moderno. Caja de acero inoxidable resistente al agua, correa ajustable de cuero genuino y movimiento de cuarzo preciso. Ideal para uso diario o eventos formales. Pantalla analógica con marcadores luminosos para fácil lectura en la oscuridad. Incluye garantía limitada de 1 año.',
-    images: [
-            '/img/camisetas/camiseta4n.webp',
-      '/img/camisetas/camiseta3.webp',
-      '/img/camisetas/camiseta4.webp',
-    ],
-  },
-  {
-    id: 3,
-    name: 'Camiseta de hombre estilo americano moderno',
-    size: 'M',
-    originalPrice: 129900,
-    price: 38900,
-    rating: 4.7,
-    reviewCount: 312,
-    description: 'Camiseta de hombre con estilo americano moderno, diseño minimalista y corte contemporáneo. Confeccionada en algodón premium de alta gramaje para mayor durabilidad y confort. Costuras dobles en mangas y laterales, cuello reforzado que no se deforma con los lavados. Ideal para uso diario, oficina o salidas casuales. Disponible en varios colores clásicos. Tela anti-pilling que mantiene su aspecto impecable lavado tras lavado.',
-    images: [
-      '/img/camisetas/camiseta5.webp',
-      '/img/camisetas/camiseta6.webp',
-      '/img/camisetas/camiseta7.webp',
-    ],
-  },
-  {
-    id: 4,
-    name: 'Camiseta para mujer con estampado de mariposas vintage',
-    size: 'M',
-    originalPrice: 89900,
-    price: 35900,
-    rating: 4.5,
-    reviewCount: 156,
-    description: 'Camiseta para mujer con estampado de mariposas vintage, confeccionada en algodón orgánico suave y transpirable. Corte entallado que resalta la figura, cuello redondo y mangas cortas. Ideal para combinar con jeans, faldas o pantalones cortos. Disponible en varias tallas y colores pastel. Lavable a máquina sin perder su forma ni color. Diseño ecológico y sostenible, libre de químicos dañinos.',
-    images: [
-      '/img/tecnologia/image1.webp',
-      '/img/tecnologia/image2.webp',
-    ],
-  },
-  {
-    id: 5,
-    name: 'Cruces Camiseta negra',
-    size: 'M',
-    deal: { flashPrice: 37000 },
-    originalPrice: 79900,
-    price: 36000,
-    rating: 4.9,
-    reviewCount: 445,
-    description: 'Camiseta premium confeccionada en algodón peinado 100% de alta calidad. Tejido de 180 gramos que brinda la combinación perfecta entre suavidad y durabilidad. Corte moderno y entallado que estiliza la figura. Costuras reforzadas en todos los puntos de tensión, cuello ribeteado que mantiene su forma original. Libre de químicos irritantes, hipoalergénica y transpirable. Disponible en múltiples tallas. Resistente a múltiples lavados sin encogerse ni destejerse. Hecha con procesos de producción sostenibles.',
-    images: [
-      '/img/camisetas/camiseta8.webp',
-      '/img/camisetas/camiseta9.webp',
-    ],
-  },
-  {
-    id: 6,
-    name: 'Camiseta Casual de Manga Corta para Mujer',
-    size: 'M',
-    originalPrice: 99900,
-    price: 30000,
-    rating: 4.4,
-    reviewCount: 98,
-    description: 'Camiseta casual de manga corta para mujer con diseño moderno y estilo versátil. Confeccionada en tela suave y transpirable, ideal para el día a día. Cuello redondo, mangas cortas y ajuste cómodo. Disponible en múltiples colores y tallas. Lavable a máquina sin perder su forma ni color.',
-    images: [
-      '/img/camisetas/camiseta10.webp',
-      '/img/camisetas/camiseta11.webp',
-    ],
-  },
-  {
-    id: 7,
-    name: 'Bolso negro Clasico para mujer',
-    originalPrice: 159900,
-    price: 35000,
-    rating: 4.7,
-    reviewCount: 267,
-    description: 'Bolso negro clásico para mujer, confeccionado en cuero genuino de alta calidad. Diseño elegante y versátil, ideal para ocasiones formales o casuales. Espacio interior amplio con compartimentos organizados. Asas regulables y cierre seguro. Disponible en múltiples colores y tallas. Fácil de limpiar con un paño húmedo para mantener su aspecto impecable.',
-    images: [
-      '/img/camisetas/camiseta12.webp',
-      '/img/camisetas/camiseta13.webp',
-    ],
-  },
-  {
-    id: 8,
-    name: 'Polo de moda de manga corta para hombre Verde',
-    size: 'M',
-    originalPrice: 89900,
-    price: 36900,
-    rating: 4.6,
-    reviewCount: 203,
-    description: 'Polo de manga corta para hombre en color verde, con diseño clásico y moderno. Confeccionado en algodón fresco y transpirable, ideal para uso diario o eventos casuales. Cuello tipo polo con botones, mangas cortas y corte recto que brinda comodidad. Fácil de combinar con jeans, pantalones de vestir o shorts. Disponible en varias tallas. Lavable a máquina sin perder su forma ni color.',
-    images: [
-      '/img/camisetas/camiseta14.webp',
-      '/img/camisetas/camiseta15.webp',
-    ],
-  },
+async function loadProducts() {
+  try {
+    const res = await fetch('/products.json');
+    if (!res.ok) throw new Error('No se pudieron cargar los productos');
+    products = await res.json();
+  } catch (err) {
+    console.error('Error loading products:', err);
+    products = [];
+  }
+}
 
-   {
-    id: 9,
-    name: '10 collares con colgante de moda ',
-    deal: { flashPrice: 5000 },
-    originalPrice: 39900,
-    price: 7000,
-    rating: 4.6,
-    reviewCount: 203,
-    description: 'Set de 10 (5mil la unidad) collares con colgante de moda, ideales para combinar con diferentes estilos y outfits. Cada collar está hecho de aleación de metal de alta calidad, resistente al desgaste y a la corrosión. Los colgantes incluyen diseños variados como corazones, estrellas, lunas y símbolos geométricos. Longitud ajustable para adaptarse a diferentes cuellos. Perfectos para regalar o para uso personal en ocasiones especiales o el día a día.',
-    images: [
-      '/img/accsesorios/reloj.png',
-      '/img/accsesorios/reloj2.webp',
-    ],
-  },
-
-  {
-    id: 10,
-    name: 'Conjunto de animadora de top corto ',
-    originalPrice: 49900,
-    price: 35000,
-    rating: 4.6,
-    reviewCount: 203,
-    description: 'Conjunto de animadora de top corto y falda plisada, ideal para disfraces, eventos deportivos o sesiones de fotos. Hecho de poliéster y spandex de alta calidad, suave y elástico para un ajuste cómodo. Top con cuello redondo y mangas cortas, falda con cintura elástica y pliegues que permiten libertad de movimiento. Disponible en varios colores y tallas. Fácil de lavar a mano o a máquina en ciclo delicado.',
-    images: [
-       '/img/camisetas/camiseta16.webp',
-       '/img/camisetas/camiseta16n1.webp',
-        '/img/camisetas/camiseta16n2.webp',
-    ],
-  },
-
-
-  {
-    id: 11,
-    name: 'Y2K Camiseta con patrón de letras góticas ',
-    size: 'M',
-    originalPrice: 49900,
-    price: 35000,
-    rating: 4.6,
-    reviewCount: 203,
-    description: 'Camiseta Y2K con patrón de letras góticas, ideal para un look urbano y alternativo. Confeccionada en poliéster y spandex de alta calidad, suave y elástica para un ajuste cómodo. Cuello redondo, mangas cortas y corte recto que estiliza la figura. Perfecta para combinar con jeans, faldas o pantalones cargo. Disponible en varios colores y tallas. Fácil de lavar a mano o a máquina en ciclo delicado.',
-    images: [
-       '/img/camisetas/camiseta17.webp',
-       '/img/camisetas/camiseta18.webp',
-    ],
-  },
-
-   {
-    id: 12,
-    name: 'Camiseta de Transferencia Térmica para Hombre ',
-    size: 'M',
-    originalPrice: 49900,
-    price: 32000,
-    rating: 4.6,
-    reviewCount: 203,
-    description: 'Camiseta de transferencia térmica para hombre con estampado moderno de alta duración. Confeccionada en poliéster y spandex de alta calidad, suave y elástica para un ajuste cómodo. Cuello redondo, mangas cortas y corte atlético que se adapta al cuerpo. Ideal para uso diario, entrenamiento o eventos casuales. Disponible en varios colores y tallas. Fácil de lavar a mano o a máquina en ciclo delicado.',
-    images: [
-       '/img/camisetas/camiseta19.webp',
-       '/img/camisetas/camiseta20.webp',
-    ],
-  },
-
-  {
-    id: 13,
-    name: 'Conjunto de 3 camisetas sin tirantes con estampado gótico punk vintage | ',
-    size: 'M',
-    originalPrice: 49900,
-    price: 37000,
-    rating: 4.6,
-    reviewCount: 203,
-    description: 'Lote de 3 camisetas sin tirantes con estampado gótico punk vintage, perfectas para un estilo alternativo y audaz. Confeccionadas en poliéster y spandex de alta calidad, suaves y elásticas para un ajuste cómodo. Diseño sin tirantes con corte recto que permite libertad de movimiento. Ideales para combinar con jeans, chaquetas o faldas. Disponibles en varios colores y tallas. Fáciles de lavar a mano o a máquina en ciclo delicado.',
-    images: [
-       '/img/camisetas/camiseta21.webp',
-       '/img/camisetas/camiseta22.webp',
-    ],
-  },
-
-
-  {
-    id: 14,
-    name: '10 Pares/Set de Aretes de Aleación de Moda Mariposa',
-    originalPrice: 49900,
-    price: 17000,
-    rating: 4.6,
-    reviewCount: 203,
-    description: 'Set de 10 pares de aretes de aleación de moda con diseños variados: mariposa, rosa, cruz, corazones y más. Joyería ligera y resistente, ideal para regalo para damas y niñas. Perfectos para combinar con diferentes estilos y outfits del día a día o para ocasiones especiales.',
-    images: [
-       '/img/camisetas/camiseta23.webp',
-    ],
-  },
-
-   {
-    id: 15,
-    name: 'Top halter con decoración de estrella de mar',
-    originalPrice: 69900,
-    price: 35000,
-    rating: 4.6,
-    reviewCount: 203,
-    description: 'Top halter con decoración de estrella de mar, ideal para looks playeros, veraniegos o sesiones de fotos. Confeccionado en poliéster y spandex de alta calidad, suave y elástico para un ajuste cómodo. Diseño halter con cuello en V y espalda descubierta que realza la figura. Disponible en varios colores y tallas. Fácil de lavar a mano o a máquina en ciclo delicado.',
-    images: [
-       '/img/camisetas/camiseta24.webp',
-       '/img/camisetas/camiseta25.webp',
-    ],
-  },
-
-   {
-    id: 16,
-    name: 'Top sin espalda con cuello ',
-    originalPrice: 69900,
-    price: 30000,
-    rating: 4.6,
-    reviewCount: 203,
-    description: 'Top sin espalda con cuello redondo, ideal para looks modernos y atrevidos. Confeccionado en tela suave y elástica que se adapta al cuerpo cómodamente. Diseño de espalda descubierta que aporta un toque sensual y fresco. Perfecto para combinar con jeans, faldas o pantalones de tiro alto. Disponible en varios colores y tallas.',
-    images: [
-       '/img/camisetas/camiseta26.webp',
-       '/img/camisetas/camiseta27.webp',
-    ],
-  },
-];
+let products = [];
 
 function loadCart() {
   try {
@@ -746,7 +523,8 @@ function closeModal() {
   document.getElementById('buy-modal').classList.remove('open');
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
+  await loadProducts();
   renderProducts();
   updateDealTimers();
   setInterval(updateDealTimers, 1000);
