@@ -13,6 +13,7 @@ function initAdminTap() {
   document.querySelectorAll('.logo').forEach((logo) => {
     logo.addEventListener('click', (e) => {
       e.preventDefault();
+      e.stopPropagation();
       logoTapCount++;
       clearTimeout(logoTapTimer);
       clearTimeout(logoNavTimeout);
@@ -20,13 +21,12 @@ function initAdminTap() {
 
       if (logoTapCount >= 6) {
         logoTapCount = 0;
-        e.stopPropagation();
         openAdmin();
       } else {
         const href = logo.getAttribute('href') || '/';
         logoNavTimeout = setTimeout(() => { window.location.href = href; }, 300);
       }
-    });
+    }, true);
   });
 }
 
@@ -198,7 +198,10 @@ function showAdminPanel() {
     <div class="admin-panel">
       <div class="admin-panel-header">
         <h2>Admin - MinaShop</h2>
-        <button class="admin-close-btn" id="admin-close">&times;</button>
+        <div style="display:flex;gap:8px;align-items:center">
+          <button class="admin-btn admin-btn-sm admin-btn-cancel" id="admin-download">Descargar JSON</button>
+          <button class="admin-close-btn" id="admin-close">&times;</button>
+        </div>
       </div>
       <div class="admin-tabs">
         <button class="admin-tab active" data-tab="list">Productos</button>
@@ -216,6 +219,7 @@ function showAdminPanel() {
   document.body.style.overflow = 'hidden';
 
   overlay.querySelector('#admin-close').onclick = closeAdmin;
+  overlay.querySelector('#admin-download').onclick = downloadProductsJson;
   overlay.addEventListener('click', (e) => { if (e.target === overlay) closeAdmin(); });
 
   overlay.querySelectorAll('.admin-tab').forEach((tab) => {
@@ -236,6 +240,19 @@ function closeAdmin() {
   const overlay = document.getElementById('admin-overlay');
   if (overlay) overlay.remove();
   document.body.style.overflow = '';
+}
+
+function downloadProductsJson() {
+  const json = JSON.stringify(adminProducts, null, 2);
+  const blob = new Blob([json], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'products.json';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
 }
 
 async function loadAdminList() {
