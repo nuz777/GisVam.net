@@ -2355,6 +2355,30 @@ body.dark .admin-btn-primary:hover:not(:disabled) {
   color: var(--gray-400);
 }
 
+@media (max-width: 640px) {
+  .theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: var(--white);
+    box-shadow: var(--shadow-lg);
+    padding: 12px;
+    width: 48px;
+    height: 48px;
+  }
+  body.dark .theme-toggle {
+    background: #222;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  }
+  .theme-toggle:hover {
+    background: var(--gray-100);
+  }
+  body.dark .theme-toggle:hover {
+    background: #333;
+  }
+}
+
 @media (max-width: 600px) {
   .admin-panel {
     max-height: 95vh;
