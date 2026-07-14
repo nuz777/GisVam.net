@@ -606,9 +606,13 @@ function openBuyModal(product) {
 
       <p class="modal-section-title">Datos de pago</p>
       <div class="nequi-box">
+        <div class="nequi-header">
+          <img src="/logonequi/logonequi.webp" alt="Nequi" class="nequi-logo">
+          <span class="nequi-brand">Nequi</span>
+        </div>
         <p class="nequi-label">Número de Nequi</p>
         <p class="nequi-number" id="nequi-display">${NEQUI_NUMBER}</p>
-        <button class="copy-btn" id="copy-nequi">📋 Copiar número</button>
+        <button class="copy-btn" id="copy-nequi">Copiar número</button>
       </div>
 
       <button class="whatsapp-btn" id="whatsapp-btn">
