@@ -66,5 +66,18 @@
     "images": [
       "https://img.kwcdn.com/product/fancy/c9c83ff1-031d-457f-8bad-ebda9844f02e.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif"
     ]
+  },
+  {
+    "id": 1784007677241,
+    "name": "Blusa en V",
+    "description": "Camisola de Estilo Americano con Sentido de la Moda, Cuello en V Retorcido Retro, Dobladillo Irregular, Top Corto, Capa Interior, Ropa Exterior, Camisola Pequeña Ingeniosa, Color Mixto.",
+    "originalPrice": 25000,
+    "price": 15000,
+    "rating": 4.5,
+    "reviewCount": 0,
+    "images": [
+      "https://img.kwcdn.com/product/fancy/bebbf3cf-77bf-44a7-94b7-be1aa1653998.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif"
+    ],
+    "size": "S"
   }
 ]
