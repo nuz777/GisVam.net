@@ -41,5 +41,17 @@
       "https://img.kwcdn.com/product/fancy/c34b423d-287c-4abb-b440-44de4e2eb00e.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif"
     ],
     "size": "Unica"
+  },
+  {
+    "id": 1784007030947,
+    "name": "Audífonos",
+    "description": "Y26 Mini Audífonos Inalámbricos Transparentes con Pantalla Digital Exquisita, con Micrófono de Condensador y Diseño Compacto, Carga USB Tipo-C, Ideales para Deportes, Música, Llamadas y Video. Son Audífonos Inalámbricos Modernos y Duraderos.",
+    "originalPrice": 50000,
+    "price": 25000,
+    "rating": 4.5,
+    "reviewCount": 0,
+    "images": [
+      "https://img.kwcdn.com/product/fancy/4195bbd3-5929-4b2e-b496-051a8a8f9fc5.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif"
+    ]
   }
 ]
