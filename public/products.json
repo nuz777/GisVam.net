@@ -32,21 +32,6 @@
     ]
   },
   {
-    "id": 3,
-    "name": "Camiseta de hombre estilo americano moderno",
-    "size": "M",
-    "originalPrice": 129900,
-    "price": 38900,
-    "rating": 4.7,
-    "reviewCount": 312,
-    "description": "Camiseta de hombre con estilo americano moderno, diseño minimalista y corte contemporáneo. Confeccionada en algodón premium de alta gramaje para mayor durabilidad y confort. Costuras dobles en mangas y laterales, cuello reforzado que no se deforma con los lavados. Ideal para uso diario, oficina o salidas casuales. Disponible en varios colores clásicos. Tela anti-pilling que mantiene su aspecto impecable lavado tras lavado.",
-    "images": [
-      "/img/camisetas/camiseta5.webp",
-      "/img/camisetas/camiseta6.webp",
-      "/img/camisetas/camiseta7.webp"
-    ]
-  },
-  {
     "id": 9,
     "name": "10 collares con colgante de moda",
     "deal": {
