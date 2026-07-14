@@ -119,5 +119,19 @@
       "https://img.kwcdn.com/product/fmket/3572e6824414b82cb0fa9641b37c0d9e.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif",
       "https://img.kwcdn.com/product/fancy/8de47d15-3cf1-4c4b-b9e3-9859f867ad90.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif"
     ]
+  },
+  {
+    "id": 1784010045304,
+    "name": "Blusa",
+    "description": "Camiseta corta de estilo dulce para mujer con estampado de cerezas, mangas recortadas, llena de vitalidad veraniega, adecuada para salidas diarias y desplazamientos, llena de vibras tiernas y femeninas, letras en inglés CHERRY combinadas con dos patrones de estampado de cerezas, última camiseta de",
+    "originalPrice": 40000,
+    "price": 30000,
+    "rating": 4.5,
+    "reviewCount": 0,
+    "images": [
+      "https://img.kwcdn.com/product/fancy/9f76721d-b4b0-45f1-9231-b34653edcf13.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif",
+      "https://img.kwcdn.com/product/fancy/6cab523f-521f-479b-a5eb-ec38a95904bd.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif"
+    ],
+    "size": "M"
   }
 ]
