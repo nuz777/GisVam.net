@@ -105,20 +105,6 @@
     ]
   },
   {
-    "id": 8,
-    "name": "Polo de moda de manga corta para hombre Verde",
-    "size": "M",
-    "originalPrice": 89900,
-    "price": 36900,
-    "rating": 4.6,
-    "reviewCount": 203,
-    "description": "Polo de manga corta para hombre en color verde, con diseño clásico y moderno. Confeccionado en algodón fresco y transpirable, ideal para uso diario o eventos casuales. Cuello tipo polo con botones, mangas cortas y corte recto que brinda comodidad. Fácil de combinar con jeans, pantalones de vestir o shorts. Disponible en varias tallas. Lavable a máquina sin perder su forma ni color.",
-    "images": [
-      "/img/camisetas/camiseta14.webp",
-      "/img/camisetas/camiseta15.webp"
-    ]
-  },
-  {
     "id": 9,
     "name": "10 collares con colgante de moda",
     "deal": {
