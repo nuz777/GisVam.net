@@ -227,5 +227,18 @@
       "/img/camisetas/camiseta26.webp",
       "/img/camisetas/camiseta27.webp"
     ]
+  },
+  {
+    "id": 1784005589339,
+    "name": "Camiseta anime",
+    "description": "Nose",
+    "originalPrice": 82000,
+    "price": 38000,
+    "rating": 4.5,
+    "reviewCount": 0,
+    "images": [
+      "https://img.kwcdn.com/product/open/78b8d0df8b5a459dae5ac8211fc20d02-goods.jpeg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif"
+    ],
+    "size": "M"
   }
 ]
