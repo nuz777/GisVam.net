@@ -197,5 +197,21 @@
       "https://img.kwcdn.com/product/open/1e2853048ed6420581805d3c1254c84f-goods.jpeg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif"
     ],
     "size": "M"
+  },
+  {
+    "id": 1784011654854,
+    "name": "Gorra vintage",
+    "description": "2D Flat - 2026 Daga de grafiti de caracteres chinos de alta calidad, sombrero unisex ajustable con visera plana y cierre a presión vintage",
+    "originalPrice": 50000,
+    "price": 30000,
+    "rating": 4.5,
+    "reviewCount": 0,
+    "images": [
+      "https://img.kwcdn.com/product/fancy/2f12cdb3-5e33-4977-90b9-cf3dcad8ed45.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif"
+    ],
+    "size": "Unica",
+    "deal": {
+      "flashPrice": 30000
+    }
   }
 ]
