@@ -92,19 +92,6 @@
     ]
   },
   {
-    "id": 7,
-    "name": "Bolso negro Clasico para mujer",
-    "originalPrice": 159900,
-    "price": 35000,
-    "rating": 4.7,
-    "reviewCount": 267,
-    "description": "Bolso negro clásico para mujer, confeccionado en cuero genuino de alta calidad. Diseño elegante y versátil, ideal para ocasiones formales o casuales. Espacio interior amplio con compartimentos organizados. Asas regulables y cierre seguro. Disponible en múltiples colores y tallas. Fácil de limpiar con un paño húmedo para mantener su aspecto impecable.",
-    "images": [
-      "/img/camisetas/camiseta12.webp",
-      "/img/camisetas/camiseta13.webp"
-    ]
-  },
-  {
     "id": 9,
     "name": "10 collares con colgante de moda",
     "deal": {
