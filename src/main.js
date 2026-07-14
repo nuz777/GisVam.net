@@ -744,6 +744,74 @@ function toggleTheme() {
   localStorage.setItem('minaShop_theme', document.body.classList.contains('dark') ? 'dark' : 'light');
 }
 
+function initHeroCarousel() {
+  const container = document.querySelector('.hero-slides');
+  if (!container || products.length === 0) return;
+
+  const newProducts = products.slice(-5);
+  newProducts.forEach((p) => {
+    const img = p.images && p.images[0] ? p.images[0] : '';
+    const hasDiscount = p.deal && p.deal.flashPrice;
+    const price = hasDiscount ? p.deal.flashPrice : p.price;
+    const originalPrice = hasDiscount ? p.price : p.originalPrice;
+
+    const slide = document.createElement('div');
+    slide.className = 'hero-slide hero-slide--product';
+    slide.style.backgroundImage = `url('${img}')`;
+    slide.innerHTML = `
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="product-name">${p.name}</div>
+        <div class="product-price">$${price.toLocaleString('es-CO')}${originalPrice && originalPrice !== price ? `<span class="original">$${originalPrice.toLocaleString('es-CO')}</span>` : ''}</div>
+        <button class="product-cta" onclick="scrollToProduct(${p.id})">Ver producto</button>
+      </div>
+    `;
+    container.appendChild(slide);
+  });
+
+  const slides = document.querySelectorAll('.hero-slide');
+  if (slides.length <= 1) return;
+
+  const progressBar = document.querySelector('.hero-progress-bar');
+  let current = 0;
+  let timer;
+
+  function goToSlide(index) {
+    slides[current].classList.remove('active');
+    current = index;
+    slides[current].classList.add('active');
+    progressBar.style.transition = 'none';
+    progressBar.style.width = '0%';
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        progressBar.style.transition = 'width 5s linear';
+        progressBar.style.width = '100%';
+      });
+    });
+  }
+
+  function nextSlide() {
+    goToSlide((current + 1) % slides.length);
+  }
+
+  goToSlide(0);
+  timer = setInterval(nextSlide, 5000);
+
+  if (!('ontouchstart' in window)) {
+    container.addEventListener('mouseenter', () => clearInterval(timer));
+    container.addEventListener('mouseleave', () => {
+      timer = setInterval(nextSlide, 5000);
+    });
+  }
+}
+
+window.scrollToProduct = function(id) {
+  const product = products.find((p) => p.id === id);
+  const el = document.querySelector(`.product-card[data-id="${id}"]`);
+  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  if (product) setTimeout(() => openBuyModal(product), 400);
+};
+
 document.addEventListener('DOMContentLoaded', async () => {
   initTheme();
   document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
@@ -751,6 +819,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   await loadProducts();
   await loadAllReviews();
   renderProducts();
+  initHeroCarousel();
   updateDealTimers();
   setInterval(updateDealTimers, 1000);
 
