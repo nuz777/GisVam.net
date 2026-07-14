@@ -79,5 +79,19 @@
       "https://img.kwcdn.com/product/fancy/bebbf3cf-77bf-44a7-94b7-be1aa1653998.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif"
     ],
     "size": "S"
+  },
+  {
+    "id": 1784009129674,
+    "name": "Camiseta",
+    "description": "1 Camiseta casual para hombre, con diseño de rosas rojas y el número \"58.42cm | Estilo casual urbano, camiseta de manga corta y cuello redondo, cómoda y transpirable, perfecta para ocio al aire libre y ropa de paseo",
+    "originalPrice": 45000,
+    "price": 35000,
+    "rating": 4.5,
+    "reviewCount": 0,
+    "images": [
+      "https://img.kwcdn.com/product/fancy/073c1240-6b83-4168-9797-11507c166338.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif",
+      "https://img.kwcdn.com/product/fancy/42984eb6-d857-43ca-a63e-07c2fb82c7e5.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif"
+    ],
+    "size": "M"
   }
 ]
