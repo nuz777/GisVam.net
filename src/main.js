@@ -1,5 +1,12 @@
+import { db } from './firebase-config.js';
+import { ref, push, get, child } from 'firebase/database';
+
 const NEQUI_NUMBER = '304 606 81 13';
 const WHATSAPP_NUMBER = '573046068113';
+
+let allReviews = {};
+let currentModalProductId = null;
+let selectedRating = 0;
 
 async function loadProducts() {
   try {
@@ -180,6 +187,178 @@ function renderStars(rating) {
   return html;
 }
 
+function renderInteractiveStars(current) {
+  let html = '<span class="interactive-stars">';
+  for (let i = 1; i <= 5; i++) {
+    html += `<span class="star-interactive${i <= current ? ' active' : ''}" data-star="${i}">★</span>`;
+  }
+  html += '</span>';
+  return html;
+}
+
+//admin de fechas
+
+function formatDate(timestamp) {
+  const d = new Date(timestamp);
+  const day = d.getDate();
+  const months = ['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
+  return `${day} ${months[d.getMonth()]} ${d.getFullYear()}`;
+}
+
+async function loadAllReviews() {
+  try {
+    const snap = await get(ref(db, 'reviews'));
+    if (snap.exists()) {
+      allReviews = snap.val();
+    } else {
+      allReviews = {};
+    }
+  } catch (err) {
+    console.error('Error loading reviews:', err);
+    allReviews = {};
+  }
+}
+
+function getReviewStats(productId) {
+  const reviews = allReviews[productId];
+  if (!reviews) return { avg: 0, count: 0 };
+  const arr = Object.values(reviews);
+  if (arr.length === 0) return { avg: 0, count: 0 };
+  const sum = arr.reduce((s, r) => s + r.rating, 0);
+  return { avg: Math.round((sum / arr.length) * 10) / 10, count: arr.length };
+}
+
+function getEffectiveRating(product) {
+  const stats = getReviewStats(product.id);
+  if (stats.count === 0) return { rating: product.rating, reviewCount: product.reviewCount };
+  return { rating: stats.avg, reviewCount: stats.count };
+}
+
+async function submitReview(productId, name, rating, comment) {
+  await push(ref(db, `reviews/${productId}`), {
+    name: name.trim(),
+    rating,
+    comment: comment.trim(),
+    date: Date.now()
+  });
+  await loadAllReviews();
+}
+
+function renderReviewsList(productId) {
+  const reviews = allReviews[productId];
+  if (!reviews) return '<p class="reviews-empty">No hay reseñas aún. Sé el primero en comentar.</p>';
+  const arr = Object.values(reviews).sort((a, b) => b.date - a.date);
+  return arr.map(r => `
+    <div class="review-card">
+      <div class="review-card-header">
+        <span class="review-card-name">${r.name}</span>
+        <span class="review-card-date">${formatDate(r.date)}</span>
+      </div>
+      <div class="review-card-stars">${renderStars(r.rating)}</div>
+      <p class="review-card-text">${r.comment}</p>
+    </div>
+  `).join('');
+}
+
+function renderReviewForm(productId) {
+  return `
+    <form class="review-form" id="review-form">
+      <input type="text" class="review-input" id="review-name" placeholder="Tu nombre" maxlength="40" required>
+      <div class="review-rating-row">
+        <label class="review-rating-label">Calificación</label>
+        <div class="review-form-stars" id="review-stars">${renderInteractiveStars(0)}</div>
+      </div>
+      <textarea class="review-input review-textarea" id="review-comment" placeholder="Escribe tu reseña..." maxlength="500" rows="3" required></textarea>
+      <button type="submit" class="review-submit-btn" id="review-submit">Publicar reseña</button>
+    </form>
+  `;
+}
+
+function bindReviewForm(productId) {
+  const form = document.getElementById('review-form');
+  const starsContainer = document.getElementById('review-stars');
+  if (!form || !starsContainer) return;
+
+  selectedRating = 0;
+  let lastHover = 0;
+
+  starsContainer.addEventListener('click', (e) => {
+    const star = e.target.closest('.star-interactive');
+    if (!star) return;
+    selectedRating = Number(star.dataset.star);
+    lastHover = selectedRating;
+    starsContainer.innerHTML = renderInteractiveStars(selectedRating);
+  });
+
+  starsContainer.addEventListener('mouseover', (e) => {
+    const star = e.target.closest('.star-interactive');
+    if (!star) return;
+    const hoverVal = Number(star.dataset.star);
+    if (hoverVal === lastHover) return;
+    lastHover = hoverVal;
+    starsContainer.innerHTML = renderInteractiveStars(hoverVal);
+  });
+
+  starsContainer.addEventListener('mouseleave', () => {
+    lastHover = 0;
+    starsContainer.innerHTML = renderInteractiveStars(selectedRating);
+  });
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const name = document.getElementById('review-name').value.trim();
+    const comment = document.getElementById('review-comment').value.trim();
+
+    if (!name) { showToast('Escribe tu nombre', 'error'); return; }
+    if (selectedRating === 0) { showToast('Selecciona una calificación', 'error'); return; }
+    if (!comment) { showToast('Escribe un comentario', 'error'); return; }
+
+    const btn = document.getElementById('review-submit');
+    btn.disabled = true;
+    btn.textContent = 'Publicando...';
+
+    try {
+      await submitReview(productId, name, selectedRating, comment);
+      const stats = getReviewStats(productId);
+      const section = document.getElementById('reviews-section');
+      if (section) {
+        section.innerHTML = `
+          <div class="reviews-summary">
+            <span class="reviews-avg">${stats.avg}</span>
+            <span class="reviews-avg-label">${renderStars(stats.avg)} <span class="rating-count">${stats.count} reseña${stats.count !== 1 ? 's' : ''}</span></span>
+          </div>
+          ${renderReviewForm(productId)}
+          <div class="reviews-list">${renderReviewsList(productId)}</div>
+        `;
+        bindReviewForm(productId);
+      }
+      updateCardRating(productId);
+      showToast('¡Reseña publicada!', 'success');
+    } catch (err) {
+      console.error('Error submitting review:', err);
+      showToast('Error al publicar. Intenta de nuevo.', 'error');
+      btn.disabled = false;
+      btn.textContent = 'Publicar reseña';
+    }
+  });
+}
+
+function updateCardRating(productId) {
+  const stats = getReviewStats(productId);
+  const product = products.find(p => p.id === productId);
+  if (!product) return;
+  const effective = stats.count > 0
+    ? { rating: stats.avg, reviewCount: stats.count }
+    : { rating: product.rating, reviewCount: product.reviewCount };
+
+  const card = document.querySelector(`.product-card[data-id="${productId}"]`);
+  if (!card) return;
+  const ratingEl = card.querySelector('.product-rating');
+  if (ratingEl) {
+    ratingEl.innerHTML = `${renderStars(effective.rating)} <span class="rating-count">(${effective.reviewCount})</span>`;
+  }
+}
+
 let carouselStates = new Map();
 
 function renderProducts(list) {
@@ -233,7 +412,7 @@ function renderProducts(list) {
           <h3 class="product-name">${p.name}</h3>
           <p class="product-description">${p.description}</p>
           ${p.size ? `<div class="size-badge">Talla ${p.size}</div>` : ''}
-          <div class="product-rating">${renderStars(p.rating)} <span class="rating-count">(${p.reviewCount})</span></div>
+          <div class="product-rating" data-rating-id="${p.id}">${renderStars(getEffectiveRating(p).rating)} <span class="rating-count">(${getEffectiveRating(p).reviewCount})</span></div>
           <div class="product-pricing">
             <span class="product-price${p.deal ? ' deal-price' : ''}">${formatPrice(p.deal ? p.deal.flashPrice : p.price)}</span>
             <span class="product-original-price">${formatPrice(p.originalPrice)}</span>
@@ -391,7 +570,7 @@ function openBuyModal(product) {
     <div class="modal-content">
       <h2 class="modal-product-name">${product.name}</h2>
       ${product.size ? `<div class="size-badge">Talla ${product.size}</div>` : ''}
-      <div class="modal-rating">${renderStars(product.rating)} <span class="rating-count">${product.rating} (${product.reviewCount} reseñas)</span></div>
+      <div class="modal-rating" id="modal-rating-display">${renderStars(getEffectiveRating(product).rating)} <span class="rating-count">${getEffectiveRating(product).rating} (${getEffectiveRating(product).reviewCount} reseñas)</span></div>
       <div class="modal-pricing">
         <span class="modal-product-price${product.deal ? ' deal-price' : ''}">${formatPrice(product.deal ? product.deal.flashPrice : product.price)}</span>
         <span class="modal-original-price">${formatPrice(product.originalPrice)}</span>
@@ -411,6 +590,13 @@ function openBuyModal(product) {
       </div>
       ` : ''}
       <p class="modal-product-description">${product.description}</p>
+
+      <div class="modal-divider"></div>
+
+      <p class="modal-section-title">Reseñas</p>
+      <div id="reviews-section">
+        <p class="reviews-loading">Cargando reseñas...</p>
+      </div>
 
       <div class="modal-divider"></div>
 
@@ -462,6 +648,21 @@ function openBuyModal(product) {
     );
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`, '_blank');
   });
+
+  currentModalProductId = product.id;
+  const stats = getReviewStats(product.id);
+  const section = document.getElementById('reviews-section');
+  if (section) {
+    section.innerHTML = `
+      <div class="reviews-summary">
+        <span class="reviews-avg">${stats.count > 0 ? stats.avg : '--'}</span>
+        <span class="reviews-avg-label">${stats.count > 0 ? renderStars(stats.avg) : ''} <span class="rating-count">${stats.count} reseña${stats.count !== 1 ? 's' : ''}</span></span>
+      </div>
+      ${renderReviewForm(product.id)}
+      <div class="reviews-list">${renderReviewsList(product.id)}</div>
+    `;
+    bindReviewForm(product.id);
+  }
 }
 
 function bindModalCarousel(product) {
@@ -540,6 +741,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
 
   await loadProducts();
+  await loadAllReviews();
   renderProducts();
   updateDealTimers();
   setInterval(updateDealTimers, 1000);
