@@ -230,5 +230,19 @@
     "deal": {
       "flashPrice": 30000
     }
+  },
+  {
+    "id": 1784012293150,
+    "name": "Camiseta Floral",
+    "description": "Camiseta floral semitransparente para mujer con estampado de letras/flores en el frente y la espalda - Top básico de cuello redondo y manga corta compatible con blusa, adecuado para superponer en primavera y verano, ropa casual lavable a máquina",
+    "originalPrice": 45000,
+    "price": 36000,
+    "rating": 4.5,
+    "reviewCount": 0,
+    "images": [
+      "https://img.kwcdn.com/product/fancy/366cb4f3-a7fd-46c7-8ec7-d8bff841f89c.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif",
+      "https://img.kwcdn.com/product/fancy/58b6da88-70ed-440f-b553-f621f362b6fa.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif"
+    ],
+    "size": "S"
   }
 ]
