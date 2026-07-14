@@ -78,20 +78,6 @@
     ]
   },
   {
-    "id": 6,
-    "name": "Camiseta Casual de Manga Corta para Mujer",
-    "size": "M",
-    "originalPrice": 99900,
-    "price": 30000,
-    "rating": 4.4,
-    "reviewCount": 98,
-    "description": "Camiseta casual de manga corta para mujer con diseño moderno y estilo versátil. Confeccionada en tela suave y transpirable, ideal para el día a día. Cuello redondo, mangas cortas y ajuste cómodo. Disponible en múltiples colores y tallas. Lavable a máquina sin perder su forma ni color.",
-    "images": [
-      "/img/camisetas/camiseta10.webp",
-      "/img/camisetas/camiseta11.webp"
-    ]
-  },
-  {
     "id": 9,
     "name": "10 collares con colgante de moda",
     "deal": {
