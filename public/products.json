@@ -47,20 +47,6 @@
     ]
   },
   {
-    "id": 4,
-    "name": "Camiseta para mujer con estampado de mariposas vintage",
-    "size": "M",
-    "originalPrice": 89900,
-    "price": 35900,
-    "rating": 4.5,
-    "reviewCount": 156,
-    "description": "Camiseta para mujer con estampado de mariposas vintage, confeccionada en algodón orgánico suave y transpirable. Corte entallado que resalta la figura, cuello redondo y mangas cortas. Ideal para combinar con jeans, faldas o pantalones cortos. Disponible en varias tallas y colores pastel. Lavable a máquina sin perder su forma ni color. Diseño ecológico y sostenible, libre de químicos dañinos.",
-    "images": [
-      "/img/tecnologia/image1.webp",
-      "/img/tecnologia/image2.webp"
-    ]
-  },
-  {
     "id": 9,
     "name": "10 collares con colgante de moda",
     "deal": {
