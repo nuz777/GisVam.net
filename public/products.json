@@ -213,5 +213,19 @@
     "deal": {
       "flashPrice": 30000
     }
+  },
+  {
+    "id": 1784011890148,
+    "name": "Camiseta anime",
+    "description": "Nueva camiseta con estampado gráfico de la original pecado de Takopi del anime, camiseta elegante de cuello redondo para streetwear, para adolescentes, para adolescentes",
+    "originalPrice": 50000,
+    "price": 35000,
+    "rating": 4.5,
+    "reviewCount": 0,
+    "images": [
+      "https://img.kwcdn.com/product/open/78b8d0df8b5a459dae5ac8211fc20d02-goods.jpeg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif",
+      "https://img.kwcdn.com/product/open/d62cb4eb6df6475885a0738c78e0c0e8-goods.jpeg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif"
+    ],
+    "size": "M"
   }
 ]
