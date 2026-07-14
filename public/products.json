@@ -160,5 +160,22 @@
       "https://img.kwcdn.com/product/fancy/ec3ed880-64be-4d4c-9499-9d6d195aab92.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif"
     ],
     "size": "M"
+  },
+  {
+    "id": 1784011091639,
+    "name": "Top deportivo",
+    "description": "Top Deportivo de Verano para Mujer, Cuello Halter con Estampado de Cruz, Ajustado y Corto",
+    "originalPrice": 30000,
+    "price": 20000,
+    "rating": 4.5,
+    "reviewCount": 0,
+    "images": [
+      "https://img.kwcdn.com/product/fancy/a1126186-0ea1-4a6e-b8c2-6d1883dc99c5.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif",
+      "https://img.kwcdn.com/product/fancy/18ff0d56-d571-45f3-b415-462b176b23e0.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif"
+    ],
+    "size": "M",
+    "deal": {
+      "flashPrice": 20000
+    }
   }
 ]
