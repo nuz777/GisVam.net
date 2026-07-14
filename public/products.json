@@ -61,23 +61,6 @@
     ]
   },
   {
-    "id": 5,
-    "name": "Cruces Camiseta negra",
-    "size": "M",
-    "deal": {
-      "flashPrice": 37000
-    },
-    "originalPrice": 79900,
-    "price": 36000,
-    "rating": 4.9,
-    "reviewCount": 445,
-    "description": "Camiseta premium confeccionada en algodón peinado 100% de alta calidad. Tejido de 180 gramos que brinda la combinación perfecta entre suavidad y durabilidad. Corte moderno y entallado que estiliza la figura. Costuras reforzadas en todos los puntos de tensión, cuello ribeteado que mantiene su forma original. Libre de químicos irritantes, hipoalergénica y transpirable. Disponible en múltiples tallas. Resistente a múltiples lavados sin encogerse ni destejerse. Hecha con procesos de producción sostenibles.",
-    "images": [
-      "/img/camisetas/camiseta8.webp",
-      "/img/camisetas/camiseta9.webp"
-    ]
-  },
-  {
     "id": 9,
     "name": "10 collares con colgante de moda",
     "deal": {
