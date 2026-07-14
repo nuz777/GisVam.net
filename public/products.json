@@ -18,20 +18,6 @@
     }
   },
   {
-    "id": 2,
-    "name": "Relojes para hombre",
-    "originalPrice": 51900,
-    "price": 15000,
-    "rating": 4.6,
-    "reviewCount": 189,
-    "description": "Reloj de pulsera para hombre con diseño elegante y moderno. Caja de acero inoxidable resistente al agua, correa ajustable de cuero genuino y movimiento de cuarzo preciso. Ideal para uso diario o eventos formales. Pantalla analógica con marcadores luminosos para fácil lectura en la oscuridad. Incluye garantía limitada de 1 año.",
-    "images": [
-      "/img/camisetas/camiseta4n.webp",
-      "/img/camisetas/camiseta3.webp",
-      "/img/camisetas/camiseta4.webp"
-    ]
-  },
-  {
     "id": 9,
     "name": "10 collares con colgante de moda",
     "deal": {
