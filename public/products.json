@@ -1,23 +1,5 @@
 [
   {
-    "id": 1,
-    "name": "Camiseta versatil de moda con estampado de gato de bolsillo",
-    "description": "Camiseta de alta calidad con estampado único de gatito en el bolsillo frontal. Confeccionada en algodón suave y transpirable, ideal para el día a día. Cuello redondo reforzado, costuras resistentes y corte recto que favorece todo tipo de cuerpo. Fácil de combinar con jeans, shorts o faldas. Disponible en varias tallas. Lavable a máquina sin perder su forma ni color.",
-    "originalPrice": 59000,
-    "price": 35000,
-    "rating": 4.8,
-    "reviewCount": 234,
-    "images": [
-      "/img/camisetas/image.webp",
-      "/img/camisetas/camiseta.webp",
-      "/img/camisetas/camiseta2.webp"
-    ],
-    "size": "M",
-    "deal": {
-      "flashPrice": 35000
-    }
-  },
-  {
     "id": 9,
     "name": "10 collares con colgante de moda",
     "deal": {
