@@ -135,20 +135,6 @@
     ]
   },
   {
-    "id": 10,
-    "name": "Conjunto de animadora de top corto",
-    "originalPrice": 49900,
-    "price": 35000,
-    "rating": 4.6,
-    "reviewCount": 203,
-    "description": "Conjunto de animadora de top corto y falda plisada, ideal para disfraces, eventos deportivos o sesiones de fotos. Hecho de poliéster y spandex de alta calidad, suave y elástico para un ajuste cómodo. Top con cuello redondo y mangas cortas, falda con cintura elástica y pliegues que permiten libertad de movimiento. Disponible en varios colores y tallas. Fácil de lavar a mano o a máquina en ciclo delicado.",
-    "images": [
-      "/img/camisetas/camiseta16.webp",
-      "/img/camisetas/camiseta16n1.webp",
-      "/img/camisetas/camiseta16n2.webp"
-    ]
-  },
-  {
     "id": 11,
     "name": "Y2K Camiseta con patrón de letras góticas",
     "size": "M",
