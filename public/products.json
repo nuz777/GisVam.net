@@ -159,7 +159,10 @@
       "https://img.kwcdn.com/product/fancy/101de89b-9359-48f4-8b21-9f4e88f757ff.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif",
       "https://img.kwcdn.com/product/fancy/ec3ed880-64be-4d4c-9499-9d6d195aab92.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif"
     ],
-    "size": "M"
+    "size": "M",
+    "deal": {
+      "flashPrice": 25000
+    }
   },
   {
     "id": 1784011091639,
