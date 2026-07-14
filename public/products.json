@@ -135,20 +135,6 @@
     ]
   },
   {
-    "id": 11,
-    "name": "Y2K Camiseta con patrón de letras góticas",
-    "size": "M",
-    "originalPrice": 49900,
-    "price": 35000,
-    "rating": 4.6,
-    "reviewCount": 203,
-    "description": "Camiseta Y2K con patrón de letras góticas, ideal para un look urbano y alternativo. Confeccionada en poliéster y spandex de alta calidad, suave y elástica para un ajuste cómodo. Cuello redondo, mangas cortas y corte recto que estiliza la figura. Perfecta para combinar con jeans, faldas o pantalones cargo. Disponible en varios colores y tallas. Fácil de lavar a mano o a máquina en ciclo delicado.",
-    "images": [
-      "/img/camisetas/camiseta17.webp",
-      "/img/camisetas/camiseta18.webp"
-    ]
-  },
-  {
     "id": 13,
     "name": "Conjunto de 3 camisetas sin tirantes con estampado gótico punk vintage",
     "size": "M",
