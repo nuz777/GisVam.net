@@ -40,7 +40,10 @@
     "images": [
       "https://img.kwcdn.com/product/fancy/c34b423d-287c-4abb-b440-44de4e2eb00e.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif"
     ],
-    "size": "Unica"
+    "size": "Unica",
+    "deal": {
+      "flashPrice": 8000
+    }
   },
   {
     "id": 1784007030947,
