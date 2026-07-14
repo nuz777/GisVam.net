@@ -149,20 +149,6 @@
     ]
   },
   {
-    "id": 12,
-    "name": "Camiseta de Transferencia Térmica para Hombre",
-    "size": "M",
-    "originalPrice": 49900,
-    "price": 32000,
-    "rating": 4.6,
-    "reviewCount": 203,
-    "description": "Camiseta de transferencia térmica para hombre con estampado moderno de alta duración. Confeccionada en poliéster y spandex de alta calidad, suave y elástica para un ajuste cómodo. Cuello redondo, mangas cortas y corte atlético que se adapta al cuerpo. Ideal para uso diario, entrenamiento o eventos casuales. Disponible en varios colores y tallas. Fácil de lavar a mano o a máquina en ciclo delicado.",
-    "images": [
-      "/img/camisetas/camiseta19.webp",
-      "/img/camisetas/camiseta20.webp"
-    ]
-  },
-  {
     "id": 13,
     "name": "Conjunto de 3 camisetas sin tirantes con estampado gótico punk vintage",
     "size": "M",
