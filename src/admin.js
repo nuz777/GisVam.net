@@ -233,8 +233,12 @@ function showAdminPanel() {
 
 function closeAdmin() {
   const overlay = document.getElementById('admin-overlay');
-  if (overlay) overlay.remove();
-  document.body.style.overflow = '';
+  if (!overlay) return;
+  overlay.classList.add('closing');
+  setTimeout(() => {
+    overlay.remove();
+    document.body.style.overflow = '';
+  }, 200);
 }
 
 function downloadProductsJson() {
@@ -336,17 +340,9 @@ function renderProductForm(product = null) {
           <input type="text" id="af-size" value="${product && product.size ? product.size : ''}" placeholder="Ej: M">
         </div>
         <div class="admin-form-group">
-          <label>Rating</label>
-          <input type="number" id="af-rating" step="0.1" min="1" max="5" value="${product ? product.rating : '4.5'}">
+          <label>Precio flash (opcional)</label>
+          <input type="number" id="af-flash" value="${product && product.deal ? product.deal.flashPrice : ''}" placeholder="Dejar vacio si no aplica">
         </div>
-        <div class="admin-form-group">
-          <label>Resenas</label>
-          <input type="number" id="af-reviews" value="${product ? product.reviewCount : '0'}">
-        </div>
-      </div>
-      <div class="admin-form-group">
-        <label>Precio flash (opcional)</label>
-        <input type="number" id="af-flash" value="${product && product.deal ? product.deal.flashPrice : ''}" placeholder="Dejar vacio si no aplica">
       </div>
       <div class="admin-form-group">
         <label>URLs de imagenes (una por linea) *</label>
@@ -379,8 +375,8 @@ function renderProductForm(product = null) {
       description: document.getElementById('af-desc').value.trim(),
       originalPrice: Number(document.getElementById('af-orig').value),
       price: Number(document.getElementById('af-price').value),
-      rating: Number(document.getElementById('af-rating').value) || 4.5,
-      reviewCount: Number(document.getElementById('af-reviews').value) || 0,
+      rating: product ? product.rating : 4.5,
+      reviewCount: product ? product.reviewCount : 0,
       images: imagesRaw.split('\n').map((s) => s.trim()).filter(Boolean),
     };
     const sizeVal = document.getElementById('af-size').value.trim();

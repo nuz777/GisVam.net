@@ -288,6 +288,10 @@ function bindReviewForm(productId) {
     selectedRating = Number(star.dataset.star);
     lastHover = selectedRating;
     starsContainer.innerHTML = renderInteractiveStars(selectedRating);
+    const clickedStar = starsContainer.querySelector(`.star-interactive[data-star="${selectedRating}"]`);
+    if (clickedStar) {
+      clickedStar.classList.add('star-active-pop');
+    }
   });
 
   starsContainer.addEventListener('mouseover', (e) => {
@@ -324,7 +328,7 @@ function bindReviewForm(productId) {
       if (section) {
         section.innerHTML = `
           <div class="reviews-summary">
-            <span class="reviews-avg">${stats.avg}</span>
+            <span class="reviews-avg updated">${stats.avg}</span>
             <span class="reviews-avg-label">${renderStars(stats.avg)} <span class="rating-count">${stats.count} reseña${stats.count !== 1 ? 's' : ''}</span></span>
           </div>
           ${renderReviewForm(productId)}
