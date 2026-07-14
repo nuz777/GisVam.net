@@ -177,5 +177,19 @@
     "deal": {
       "flashPrice": 20000
     }
+  },
+  {
+    "id": 1784011409852,
+    "name": "Camiseta",
+    "description": "Camiseta holgada de manga corta para hombre con estilo gótico, alas de letras y estampado de cruz, disponible en tallas S-2XL. Esta camiseta regular de poliéster incorpora elementos de streetwear, hip-hop y religiosos retro.",
+    "originalPrice": 45000,
+    "price": 35000,
+    "rating": 4.5,
+    "reviewCount": 0,
+    "images": [
+      "https://img.kwcdn.com/product/open/d5ed301431964e7a9e5ce46ab993a072-goods.jpeg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif",
+      "https://img.kwcdn.com/product/open/1e2853048ed6420581805d3c1254c84f-goods.jpeg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif"
+    ],
+    "size": "M"
   }
 ]
