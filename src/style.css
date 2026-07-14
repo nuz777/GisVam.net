@@ -592,6 +592,7 @@ body.dark .admin-btn-primary:hover:not(:disabled) {
   position: relative;
   width: 100%;
   min-height: 280px;
+  overflow-anchor: none;
 }
 
 .hero-slide {
