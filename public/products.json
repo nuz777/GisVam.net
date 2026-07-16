@@ -2,18 +2,18 @@
   {
     "id": 9,
     "name": "10 collares con colgante de moda",
-    "deal": {
-      "flashPrice": 5000
-    },
-    "originalPrice": 39900,
-    "price": 7000,
+    "description": "Set de 10 (5mil la unidad) collares con colgante de moda, ideales para combinar con diferentes estilos y outfits. Cada collar está hecho de aleación de metal de alta calidad, resistente al desgaste y a la corrosión. Los colgantes incluyen diseños variados como corazones, estrellas, lunas y símbolos geométricos. Longitud ajustable para adaptarse a diferentes cuellos. Perfectos para regalar o para uso personal en ocasiones especiales o el día a día.",
+    "originalPrice": 12000,
+    "price": 5000,
     "rating": 4.6,
     "reviewCount": 203,
-    "description": "Set de 10 (5mil la unidad) collares con colgante de moda, ideales para combinar con diferentes estilos y outfits. Cada collar está hecho de aleación de metal de alta calidad, resistente al desgaste y a la corrosión. Los colgantes incluyen diseños variados como corazones, estrellas, lunas y símbolos geométricos. Longitud ajustable para adaptarse a diferentes cuellos. Perfectos para regalar o para uso personal en ocasiones especiales o el día a día.",
     "images": [
       "/img/accsesorios/reloj.png",
       "/img/accsesorios/reloj2.webp"
-    ]
+    ],
+    "deal": {
+      "flashPrice": 5000
+    }
   },
   {
     "id": 1784006793636,
