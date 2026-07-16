@@ -256,5 +256,19 @@
     "images": [
       "https://img.kwcdn.com/product/fancy/bcfd266d-610d-4e2a-87d5-0a23eead1fd9.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif"
     ]
+  },
+  {
+    "id": 1784183059056,
+    "name": "Camiseta  🍒",
+    "description": "Camiseta corta de estilo dulce para mujer con estampado de cerezas, mangas recortadas, llena de vitalidad veraniega, adecuada para salidas diarias y desplazamientos, llena de vibras tiernas y femeninas, letras en inglés CHERRY combinadas con dos patrones de estampado de cerezas.",
+    "originalPrice": 40000,
+    "price": 25000,
+    "rating": 4.5,
+    "reviewCount": 0,
+    "images": [
+      "https://img.kwcdn.com/product/fancy/9f76721d-b4b0-45f1-9231-b34653edcf13.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif",
+      "https://img.kwcdn.com/product/fancy/6cab523f-521f-479b-a5eb-ec38a95904bd.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif"
+    ],
+    "size": "M"
   }
 ]
