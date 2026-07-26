@@ -373,6 +373,7 @@ function renderProducts(list) {
       (p) => `
       <div class="product-card" data-id="${p.id}">
         <span class="discount-badge">-${calcDiscount(p.originalPrice, p.deal ? p.deal.flashPrice : p.price)}%</span>
+        <span class="stock-badge" title="Stock disponible"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg> quedan ${p.stock != null ? p.stock : 1}</span>
         <div class="carousel" data-product-id="${p.id}">
           <div class="carousel-track" id="track-${p.id}">
             ${p.images

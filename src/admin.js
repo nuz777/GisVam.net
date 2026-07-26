@@ -340,6 +340,10 @@ function renderProductForm(product = null) {
           <input type="text" id="af-size" value="${product && product.size ? product.size : ''}" placeholder="Ej: M">
         </div>
         <div class="admin-form-group">
+          <label>Stock</label>
+          <input type="number" id="af-stock" min="0" value="${product && product.stock != null ? product.stock : 1}" placeholder="1">
+        </div>
+        <div class="admin-form-group">
           <label>Precio flash (opcional)</label>
           <input type="number" id="af-flash" value="${product && product.deal ? product.deal.flashPrice : ''}" placeholder="Dejar vacio si no aplica">
         </div>
@@ -381,6 +385,8 @@ function renderProductForm(product = null) {
     };
     const sizeVal = document.getElementById('af-size').value.trim();
     if (sizeVal) productData.size = sizeVal;
+    const stockVal = document.getElementById('af-stock').value;
+    productData.stock = stockVal !== '' ? Number(stockVal) : 1;
     if (flashRaw) productData.deal = { flashPrice: Number(flashRaw) };
 
     submitBtn.disabled = true;

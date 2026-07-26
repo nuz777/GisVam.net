@@ -7,6 +7,7 @@
     "price": 5000,
     "rating": 4.6,
     "reviewCount": 203,
+    "stock": 10,
     "images": [
       "/img/accsesorios/reloj.png",
       "/img/accsesorios/reloj2.webp"
@@ -23,6 +24,7 @@
     "price": 8000,
     "rating": 4.5,
     "reviewCount": 0,
+    "stock": 1,
     "images": [
       "https://img.kwcdn.com/product/fancy/c34b423d-287c-4abb-b440-44de4e2eb00e.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif"
     ],
@@ -39,6 +41,7 @@
     "price": 25000,
     "rating": 4.5,
     "reviewCount": 0,
+    "stock": 1,
     "images": [
       "https://img.kwcdn.com/product/fancy/4195bbd3-5929-4b2e-b496-051a8a8f9fc5.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif",
       "https://img.kwcdn.com/product/fancy/2d57ee29-08e3-42b9-944c-12234778a96a.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif"
@@ -52,6 +55,7 @@
     "price": 5000,
     "rating": 4.5,
     "reviewCount": 0,
+    "stock": 1,
     "images": [
       "https://img.kwcdn.com/product/fancy/c9c83ff1-031d-457f-8bad-ebda9844f02e.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif"
     ]
@@ -64,6 +68,7 @@
     "price": 15000,
     "rating": 4.5,
     "reviewCount": 0,
+    "stock": 1,
     "images": [
       "https://img.kwcdn.com/product/fancy/bebbf3cf-77bf-44a7-94b7-be1aa1653998.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif"
     ],
@@ -77,6 +82,7 @@
     "price": 35000,
     "rating": 4.5,
     "reviewCount": 0,
+    "stock": 1,
     "images": [
       "https://img.kwcdn.com/product/fancy/073c1240-6b83-4168-9797-11507c166338.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif",
       "https://img.kwcdn.com/product/fancy/42984eb6-d857-43ca-a63e-07c2fb82c7e5.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif"
@@ -91,6 +97,7 @@
     "price": 10000,
     "rating": 4.5,
     "reviewCount": 0,
+    "stock": 1,
     "images": [
       "https://img.kwcdn.com/product/fancy/ddcb0d1a-aa15-460a-b7cb-353497784bcd.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif"
     ],
@@ -104,6 +111,7 @@
     "price": 25000,
     "rating": 4.5,
     "reviewCount": 0,
+    "stock": 1,
     "images": [
       "https://img.kwcdn.com/product/fmket/3572e6824414b82cb0fa9641b37c0d9e.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif",
       "https://img.kwcdn.com/product/fancy/8de47d15-3cf1-4c4b-b9e3-9859f867ad90.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif"
@@ -117,6 +125,7 @@
     "price": 25000,
     "rating": 4.5,
     "reviewCount": 0,
+    "stock": 1,
     "images": [
       "https://img.kwcdn.com/product/fancy/9f76721d-b4b0-45f1-9231-b34653edcf13.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif",
       "https://img.kwcdn.com/product/fancy/6cab523f-521f-479b-a5eb-ec38a95904bd.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif"
@@ -131,6 +140,7 @@
     "price": 25000,
     "rating": 4.5,
     "reviewCount": 0,
+    "stock": 1,
     "images": [
       "https://img.kwcdn.com/product/open/d7147e4ece394551a82d1223cf88408b-goods.jpeg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avifhttps://img.kwcdn.com/product/open/667159c829034c75981391a3c955620e-goods.jpeg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif"
     ],
@@ -144,6 +154,7 @@
     "price": 25000,
     "rating": 4.5,
     "reviewCount": 0,
+    "stock": 1,
     "images": [
       "https://img.kwcdn.com/product/fancy/101de89b-9359-48f4-8b21-9f4e88f757ff.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif",
       "https://img.kwcdn.com/product/fancy/ec3ed880-64be-4d4c-9499-9d6d195aab92.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif"
@@ -161,6 +172,7 @@
     "price": 20000,
     "rating": 4.5,
     "reviewCount": 0,
+    "stock": 1,
     "images": [
       "https://img.kwcdn.com/product/fancy/a1126186-0ea1-4a6e-b8c2-6d1883dc99c5.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif",
       "https://img.kwcdn.com/product/fancy/18ff0d56-d571-45f3-b415-462b176b23e0.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif"
@@ -178,6 +190,7 @@
     "price": 35000,
     "rating": 4.5,
     "reviewCount": 0,
+    "stock": 1,
     "images": [
       "https://img.kwcdn.com/product/open/d5ed301431964e7a9e5ce46ab993a072-goods.jpeg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif",
       "https://img.kwcdn.com/product/open/1e2853048ed6420581805d3c1254c84f-goods.jpeg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif"
@@ -192,6 +205,7 @@
     "price": 30000,
     "rating": 4.5,
     "reviewCount": 0,
+    "stock": 1,
     "images": [
       "https://img.kwcdn.com/product/fancy/2f12cdb3-5e33-4977-90b9-cf3dcad8ed45.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif"
     ],
@@ -208,6 +222,7 @@
     "price": 38000,
     "rating": 4.5,
     "reviewCount": 0,
+    "stock": 1,
     "images": [
       "https://img.kwcdn.com/product/open/78b8d0df8b5a459dae5ac8211fc20d02-goods.jpeg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif",
       "https://img.kwcdn.com/product/open/d62cb4eb6df6475885a0738c78e0c0e8-goods.jpeg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif"
@@ -222,6 +237,7 @@
     "price": 30000,
     "rating": 4.5,
     "reviewCount": 0,
+    "stock": 1,
     "images": [
       "https://img.kwcdn.com/product/fancy/ab7ca054-d6db-4129-bf69-7c1554d5d538.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif",
       "https://img.kwcdn.com/product/fancy/433e33e2-4208-43b7-8ed1-0fbdc0efff58.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif"
@@ -239,6 +255,7 @@
     "price": 36000,
     "rating": 4.5,
     "reviewCount": 0,
+    "stock": 1,
     "images": [
       "https://img.kwcdn.com/product/fancy/366cb4f3-a7fd-46c7-8ec7-d8bff841f89c.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif",
       "https://img.kwcdn.com/product/fancy/58b6da88-70ed-440f-b553-f621f362b6fa.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif"
@@ -253,6 +270,7 @@
     "price": 5000,
     "rating": 4.5,
     "reviewCount": 0,
+    "stock": 1,
     "images": [
       "https://img.kwcdn.com/product/fancy/bcfd266d-610d-4e2a-87d5-0a23eead1fd9.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif"
     ]
@@ -265,6 +283,7 @@
     "price": 25000,
     "rating": 4.5,
     "reviewCount": 0,
+    "stock": 1,
     "images": [
       "https://img.kwcdn.com/product/fancy/9f76721d-b4b0-45f1-9231-b34653edcf13.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif",
       "https://img.kwcdn.com/product/fancy/6cab523f-521f-479b-a5eb-ec38a95904bd.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif"
@@ -279,6 +298,7 @@
     "price": 15000,
     "rating": 4.5,
     "reviewCount": 0,
+    "stock": 1,
     "images": [
       "https://img.kwcdn.com/product/fancy/1ac5452f-17bc-442c-8bf5-695f4f3c41f8.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif",
       "https://img.kwcdn.com/product/fancy/826bce4f-2158-4bb5-a94d-735d5139072a.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif"
