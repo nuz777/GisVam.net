@@ -76,14 +76,18 @@ function updateCartQuantity(productId, delta) {
 }
 
 function getCartTotal() {
-  return cart.reduce((sum, item) => {
-    const product = products.find((p) => p.id === item.productId);
-    return sum + (product ? product.price * item.quantity : 0);
-  }, 0);
+  return cart
+    .filter((item) => products.some((p) => p.id === item.productId))
+    .reduce((sum, item) => {
+      const product = products.find((p) => p.id === item.productId);
+      return sum + (product ? product.price * item.quantity : 0);
+    }, 0);
 }
 
 function getCartCount() {
-  return cart.reduce((sum, item) => sum + item.quantity, 0);
+  return cart
+    .filter((item) => products.some((p) => p.id === item.productId))
+    .reduce((sum, item) => sum + item.quantity, 0);
 }
 
 function updateCartBadge() {
@@ -98,17 +102,18 @@ function renderCart() {
   const footer = document.getElementById('cart-footer');
   const totalEl = document.getElementById('cart-total');
 
-  if (cart.length === 0) {
+  const validItems = cart.filter((item) => products.some((p) => p.id === item.productId));
+
+  if (validItems.length === 0) {
     container.innerHTML = '<p class="cart-empty">El carrito está vacío</p>';
     footer.style.display = 'none';
     return;
   }
 
   footer.style.display = 'block';
-  container.innerHTML = cart
+  container.innerHTML = validItems
     .map((item) => {
       const product = products.find((p) => p.id === item.productId);
-      if (!product) return '';
       return `
         <div class="cart-item">
           <img class="cart-item-img" src="${product.images[0]}" alt="${product.name}" loading="lazy">
@@ -251,7 +256,10 @@ function renderReviewsList(productId) {
   return arr.map(r => `
     <div class="review-card">
       <div class="review-card-header">
-        <span class="review-card-name">${r.name}</span>
+        <div class="review-card-user">
+          <div class="review-card-avatar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+          <span class="review-card-name">${r.name}</span>
+        </div>
         <span class="review-card-date">${formatDate(r.date)}</span>
       </div>
       <div class="review-card-stars">${renderStars(r.rating)}</div>
@@ -263,7 +271,10 @@ function renderReviewsList(productId) {
 function renderReviewForm(productId) {
   return `
     <form class="review-form" id="review-form">
-      <input type="text" class="review-input" id="review-name" placeholder="Tu nombre" maxlength="40" required>
+      <div class="review-input-wrap">
+        <svg class="review-input-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <input type="text" class="review-input" id="review-name" placeholder="Tu nombre" maxlength="40" required>
+      </div>
       <div class="review-rating-row">
         <label class="review-rating-label">Calificación</label>
         <div class="review-form-stars" id="review-stars">${renderInteractiveStars(0)}</div>
@@ -818,6 +829,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
 
   await loadProducts();
+  cart = cart.filter((item) => products.some((p) => p.id === item.productId));
+  saveCart();
   await loadAllReviews();
   renderProducts();
   initHeroCarousel();
