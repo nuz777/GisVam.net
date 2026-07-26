@@ -863,9 +863,13 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   const searchInput = document.getElementById('search-input');
   const searchBtn = document.getElementById('search-btn');
+  const headerSearchInput = document.getElementById('header-search-input');
+  const headerSearchBtn = document.getElementById('header-search-btn');
 
   function doSearch() {
-    const q = searchInput.value.trim().toLowerCase();
+    const q = (headerSearchInput ? headerSearchInput.value : searchInput.value).trim().toLowerCase();
+    if (headerSearchInput) headerSearchInput.value = q;
+    if (searchInput) searchInput.value = q;
     if (!q) {
       renderProducts();
       return;
@@ -883,6 +887,14 @@ document.addEventListener('DOMContentLoaded', async () => {
   searchInput.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') doSearch();
   });
+
+  if (headerSearchInput) {
+    headerSearchInput.addEventListener('input', doSearch);
+    headerSearchBtn.addEventListener('click', doSearch);
+    headerSearchInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') doSearch();
+    });
+  }
 
   document.getElementById('modal-close').addEventListener('click', closeModal);
 
