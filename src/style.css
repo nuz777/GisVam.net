@@ -393,8 +393,16 @@ body.dark .cart-item-name {
   color: #e0e0e0;
 }
 
-body.dark .cart-empty {
-  color: #666;
+body.dark .cart-empty-icon {
+  color: #444;
+}
+
+body.dark .cart-empty-title {
+  color: #ccc;
+}
+
+body.dark .cart-empty-sub {
+  color: #888;
 }
 
 body.dark .cart-item-qty-btn {
@@ -1787,12 +1795,33 @@ body.dark .admin-btn-primary:hover:not(:disabled) {
   color: var(--gray-500);
 }
 
-.reviews-empty {
+.reviews-empty-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 24px 16px;
+  background: var(--blue-50);
+  border: 1px dashed var(--blue-200);
+  border-radius: var(--radius-md);
+  animation: reviewsFadeIn 0.3s ease-out;
+}
+
+.reviews-empty-icon {
+  color: var(--blue-500);
+  margin-bottom: 8px;
+}
+
+.reviews-empty-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--blue-600);
+  margin-bottom: 4px;
+}
+
+.reviews-empty-sub {
   font-size: 13px;
   color: var(--gray-500);
-  text-align: center;
-  padding: 14px 0;
-  animation: reviewsFadeIn 0.3s ease-out;
 }
 
 .review-form {
@@ -2116,11 +2145,30 @@ body.dark .admin-btn-primary:hover:not(:disabled) {
   padding: 16px 24px;
 }
 
-.cart-empty {
+.cart-empty-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 20px;
   text-align: center;
+}
+
+.cart-empty-icon {
+  color: var(--gray-300);
+  margin-bottom: 16px;
+}
+
+.cart-empty-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--gray-700);
+  margin-bottom: 4px;
+}
+
+.cart-empty-sub {
+  font-size: 13px;
   color: var(--gray-500);
-  font-size: 15px;
-  padding: 40px 0;
 }
 
 .cart-item {
@@ -3066,10 +3114,25 @@ body.dark .review-card-name {
 body.dark .review-card-text {
   color: #bbb;
 }
-body.dark .reviews-empty,
+body.dark .reviews-empty-wrap {
+  background: #1a1100;
+  border-color: #553300;
+}
+
+body.dark .reviews-empty-icon {
+  color: var(--blue-500);
+}
+
+body.dark .reviews-empty-title {
+  color: var(--blue-200);
+}
+
+body.dark .reviews-empty-sub {
+  color: #888;
+}
+
 body.dark .reviews-loading {
   color: #666;
-  background: none;
 }
 body.dark .review-submit-btn {
   box-shadow: 0 2px 8px rgba(245, 124, 0, 0.2);

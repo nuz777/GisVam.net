@@ -105,7 +105,12 @@ function renderCart() {
   const validItems = cart.filter((item) => products.some((p) => p.id === item.productId));
 
   if (validItems.length === 0) {
-    container.innerHTML = '<p class="cart-empty">El carrito está vacío</p>';
+    container.innerHTML = `
+      <div class="cart-empty-wrap">
+        <svg class="cart-empty-icon" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        <p class="cart-empty-title">El carrito está vacío</p>
+        <p class="cart-empty-sub">Escoge productos y agrégalos aquí</p>
+      </div>`;
     footer.style.display = 'none';
     return;
   }
@@ -251,7 +256,12 @@ async function submitReview(productId, name, rating, comment) {
 
 function renderReviewsList(productId) {
   const reviews = allReviews[productId];
-  if (!reviews) return '<p class="reviews-empty">No hay reseñas aún. Sé el primero en comentar.</p>';
+  if (!reviews) return `
+    <div class="reviews-empty-wrap">
+      <svg class="reviews-empty-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      <p class="reviews-empty-title">¿Qué te pareció el producto?</p>
+      <p class="reviews-empty-sub">Sé el primero en dejar tu reseña</p>
+    </div>`;
   const arr = Object.values(reviews).sort((a, b) => b.date - a.date);
   return arr.map(r => `
     <div class="review-card">
