@@ -52,7 +52,7 @@ function addToCart(productId) {
   cartBtn.classList.remove('cart-bounce');
   void cartBtn.offsetWidth;
   cartBtn.classList.add('cart-bounce');
-  showToast('Producto agregado al carrito', 'success');
+  showToast('Agregado al carrito', 'cart');
 }
 
 function removeFromCart(productId) {
@@ -987,14 +987,17 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 function showToast(message, type) {
   const toast = document.getElementById('toast');
-  toast.className = 'toast show' + (type === 'success' ? ' success' : '');
-  toast.innerHTML = type === 'success'
-    ? `<div class="toast-header">
-        <span class="toast-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-        ${message}
-       </div>
-       <div class="toast-progress"><div class="toast-progress-bar"></div></div>`
+  const dur = type === 'cart' ? 1800 : 3000;
+  toast.className = 'toast show' + (type === 'success' ? ' success' : type === 'cart' ? ' cart' : '');
+  const iconSvg = type === 'success'
+    ? '<span class="toast-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>'
+    : type === 'cart'
+    ? '<span class="toast-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></span>'
+    : '';
+  toast.innerHTML = (type === 'success' || type === 'cart')
+    ? `<div class="toast-header">${iconSvg}${message}</div>
+       <div class="toast-progress"><div class="toast-progress-bar" style="animation-duration:${dur}ms"></div></div>`
     : `<div class="toast-header">${message}</div>
-       <div class="toast-progress"><div class="toast-progress-bar"></div></div>`;
-  setTimeout(() => toast.classList.remove('show'), 3000);
+       <div class="toast-progress"><div class="toast-progress-bar" style="animation-duration:${dur}ms"></div></div>`;
+  setTimeout(() => toast.classList.remove('show'), dur);
 }
