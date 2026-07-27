@@ -62,6 +62,13 @@ function removeFromCart(productId) {
   saveCart();
 }
 
+function clearCart() {
+  cart = [];
+  updateCartBadge();
+  renderCart();
+  saveCart();
+}
+
 function updateCartQuantity(productId, delta) {
   const item = cart.find((i) => i.productId === productId);
   if (!item) return;
@@ -101,6 +108,7 @@ function renderCart() {
   const container = document.getElementById('cart-items');
   const footer = document.getElementById('cart-footer');
   const totalEl = document.getElementById('cart-total');
+  const clearBtn = document.getElementById('cart-clear-btn');
 
   const validItems = cart.filter((item) => products.some((p) => p.id === item.productId));
 
@@ -112,10 +120,12 @@ function renderCart() {
         <p class="cart-empty-sub">Escoge productos y agrégalos aquí</p>
       </div>`;
     footer.style.display = 'none';
+    clearBtn.style.display = 'none';
     return;
   }
 
   footer.style.display = 'block';
+  clearBtn.style.display = 'inline-flex';
   container.innerHTML = validItems
     .map((item) => {
       const product = products.find((p) => p.id === item.productId);
@@ -952,6 +962,12 @@ document.addEventListener('DOMContentLoaded', async () => {
       `Hola! Quiero comprar:\n${items}\n\nTotal: ${total}\n¿Cómo hago para pagarlo? 🙌`
     );
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`, '_blank');
+  });
+
+  document.getElementById('cart-clear-btn').addEventListener('click', () => {
+    if (cart.length === 0) return;
+    if (!confirm('¿Vaciar todo el carrito?')) return;
+    clearCart();
   });
 
   document.addEventListener('click', (e) => {
