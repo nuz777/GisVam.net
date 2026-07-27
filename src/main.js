@@ -156,6 +156,9 @@ function toggleCart(open) {
   panel.classList.toggle('open', open);
   overlay.classList.toggle('open', open);
   document.body.style.overflow = open ? 'hidden' : '';
+  if (open) {
+    history.pushState({ modal: 'cart' }, '');
+  }
 }
 
 function calcDiscount(original, current) {
@@ -657,6 +660,7 @@ function openBuyModal(product) {
   document.getElementById('modal-cart-float').classList.add('has-float');
 
   modal.classList.add('open');
+  history.pushState({ modal: 'buy' }, '');
 
   bindModalCarousel(product);
   document.getElementById('copy-nequi').addEventListener('click', () => {
@@ -753,7 +757,10 @@ function bindModalCarousel(product) {
 }
 
 function closeModal() {
-  document.getElementById('buy-modal').classList.remove('open');
+  const modal = document.getElementById('buy-modal');
+  if (!modal.classList.contains('open')) return;
+  modal.classList.remove('open');
+  if (history.state && history.state.modal === 'buy') history.back();
 }
 
 function initTheme() {
@@ -851,15 +858,18 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   if (!sessionStorage.getItem('welcomeDismissed')) {
     document.getElementById('welcome-modal').classList.add('open');
+    history.pushState({ modal: 'welcome' }, '');
   }
   document.getElementById('welcome-close').addEventListener('click', () => {
     document.getElementById('welcome-modal').classList.remove('open');
     sessionStorage.setItem('welcomeDismissed', '1');
+    if (history.state && history.state.modal === 'welcome') history.back();
   });
   document.getElementById('welcome-modal').addEventListener('click', (e) => {
     if (e.target === e.currentTarget) {
       document.getElementById('welcome-modal').classList.remove('open');
       sessionStorage.setItem('welcomeDismissed', '1');
+      if (history.state && history.state.modal === 'welcome') history.back();
     }
   });
 
@@ -919,8 +929,14 @@ document.addEventListener('DOMContentLoaded', async () => {
   });
 
   document.getElementById('cart-btn').addEventListener('click', () => toggleCart(true));
-  document.getElementById('cart-close').addEventListener('click', () => toggleCart(false));
-  document.getElementById('cart-overlay').addEventListener('click', () => toggleCart(false));
+  document.getElementById('cart-close').addEventListener('click', () => {
+    if (history.state && history.state.modal === 'cart') history.back();
+    else toggleCart(false);
+  });
+  document.getElementById('cart-overlay').addEventListener('click', () => {
+    if (history.state && history.state.modal === 'cart') history.back();
+    else toggleCart(false);
+  });
 
   document.getElementById('cart-checkout-btn').addEventListener('click', () => {
     if (cart.length === 0) return;
@@ -948,13 +964,37 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   updateCartBadge();
   renderCart();
+
+  window.addEventListener('popstate', () => {
+    const state = history.state;
+    const buyModal = document.getElementById('buy-modal');
+    const welcomeModal = document.getElementById('welcome-modal');
+    const cartPanel = document.getElementById('cart-panel');
+
+    if (buyModal.classList.contains('open') && (!state || state.modal !== 'buy')) {
+      buyModal.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    if (welcomeModal.classList.contains('open') && (!state || state.modal !== 'welcome')) {
+      welcomeModal.classList.remove('open');
+      sessionStorage.setItem('welcomeDismissed', '1');
+    }
+    if (cartPanel.classList.contains('open') && (!state || state.modal !== 'cart')) {
+      toggleCart(false);
+    }
+  });
 });
 
 function showToast(message, type) {
   const toast = document.getElementById('toast');
   toast.className = 'toast show' + (type === 'success' ? ' success' : '');
   toast.innerHTML = type === 'success'
-    ? '<span class="toast-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>' + message
-    : message;
+    ? `<div class="toast-header">
+        <span class="toast-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+        ${message}
+       </div>
+       <div class="toast-progress"><div class="toast-progress-bar"></div></div>`
+    : `<div class="toast-header">${message}</div>
+       <div class="toast-progress"><div class="toast-progress-bar"></div></div>`;
   setTimeout(() => toast.classList.remove('show'), 3000);
 }
