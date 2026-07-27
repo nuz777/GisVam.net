@@ -617,6 +617,8 @@ function openBuyModal(product) {
       ` : ''}
       <p class="modal-product-description">${product.description}</p>
 
+      <div class="shipping-badge">🚚 Envío a la puerta de tu casa si eres de Juan Mina</div>
+
       <div class="modal-divider"></div>
 
       <p class="modal-section-title">Reseñas</p>
