@@ -69,6 +69,49 @@ function clearCart() {
   saveCart();
 }
 
+function showConfirm({ title, text, confirmText = 'Confirmar', onConfirm }) {
+  const overlay = document.getElementById('confirm-overlay');
+  const modal = document.getElementById('confirm-modal');
+  const titleEl = document.getElementById('confirm-title');
+  const textEl = document.getElementById('confirm-text');
+  const okBtn = document.getElementById('confirm-ok');
+  const cancelBtn = document.getElementById('confirm-cancel');
+
+  titleEl.textContent = title;
+  textEl.textContent = text;
+  okBtn.textContent = confirmText;
+
+  overlay.classList.remove('closing');
+  overlay.classList.add('open');
+
+  function close() {
+    overlay.classList.add('closing');
+    overlay.classList.remove('open');
+    cleanup();
+  }
+
+  function cleanup() {
+    okBtn.removeEventListener('click', handleOk);
+    cancelBtn.removeEventListener('click', close);
+    overlay.removeEventListener('click', handleOverlay);
+    modal.removeEventListener('click', (e) => e.stopPropagation());
+  }
+
+  function handleOk() {
+    close();
+    onConfirm();
+  }
+
+  function handleOverlay(e) {
+    if (e.target === overlay) close();
+  }
+
+  okBtn.addEventListener('click', handleOk);
+  cancelBtn.addEventListener('click', close);
+  overlay.addEventListener('click', handleOverlay);
+  modal.addEventListener('click', (e) => e.stopPropagation());
+}
+
 function updateCartQuantity(productId, delta) {
   const item = cart.find((i) => i.productId === productId);
   if (!item) return;
@@ -966,8 +1009,12 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   document.getElementById('cart-clear-btn').addEventListener('click', () => {
     if (cart.length === 0) return;
-    if (!confirm('¿Vaciar todo el carrito?')) return;
-    clearCart();
+    showConfirm({
+      title: '¿Vaciar todo el carrito?',
+      text: 'Esta acción no se puede deshacer.',
+      confirmText: 'Sí, vaciar',
+      onConfirm: () => clearCart(),
+    });
   });
 
   document.addEventListener('click', (e) => {
