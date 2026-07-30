@@ -453,14 +453,22 @@ function renderProducts(list) {
         <span class="stock-badge" title="Stock disponible"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg> quedan ${p.stock != null ? p.stock : 1}</span>
         <div class="carousel" data-product-id="${p.id}">
           <div class="carousel-track" id="track-${p.id}">
-            ${p.images
-              .map(
-                (img, i) =>
-                  `<div class="carousel-slide">
-                <img src="${img}" alt="${p.name} - imagen ${i + 1}" width="400" height="400" loading="lazy" onerror="this.parentElement.innerHTML='<div class=img-placeholder>📷</div>'">
-              </div>`
-              )
-              .join('')}
+            ${(() => {
+              const currentPrice = p.deal ? p.deal.flashPrice : p.price;
+              const savings = p.originalPrice - currentPrice;
+              return p.images
+                .map(
+                  (img, i) =>
+                    `<div class="carousel-slide">
+                  <img src="${img}" alt="${p.name} - imagen ${i + 1}" width="400" height="400" loading="lazy" onerror="this.parentElement.innerHTML='<div class=img-placeholder>📷</div>'">
+                  <div class="carousel-overlay">
+                    <span class="carousel-price">${formatPrice(currentPrice)}</span>
+                    ${savings > 0 ? `<span class="carousel-discount">- ${formatPrice(savings)}</span>` : ''}
+                  </div>
+                </div>`
+                )
+                .join('');
+            })()}
           </div>
           ${p.images.length > 1
             ? `
@@ -909,21 +917,21 @@ document.addEventListener('DOMContentLoaded', async () => {
   updateDealTimers();
   setInterval(updateDealTimers, 1000);
 
-  if (!sessionStorage.getItem('welcomeDismissed')) {
+  if (!localStorage.getItem('welcomeDismissed')) {
     document.getElementById('welcome-modal').classList.add('open');
+    document.body.style.overflow = 'hidden';
     history.pushState({ modal: 'welcome' }, '');
   }
-  document.getElementById('welcome-close').addEventListener('click', () => {
+  function dismissWelcome() {
     document.getElementById('welcome-modal').classList.remove('open');
-    sessionStorage.setItem('welcomeDismissed', '1');
+    document.body.style.overflow = '';
+    localStorage.setItem('welcomeDismissed', '1');
     if (history.state && history.state.modal === 'welcome') history.back();
-  });
+  }
+  document.getElementById('welcome-close').addEventListener('click', dismissWelcome);
+  document.getElementById('welcome-close-x').addEventListener('click', dismissWelcome);
   document.getElementById('welcome-modal').addEventListener('click', (e) => {
-    if (e.target === e.currentTarget) {
-      document.getElementById('welcome-modal').classList.remove('open');
-      sessionStorage.setItem('welcomeDismissed', '1');
-      if (history.state && history.state.modal === 'welcome') history.back();
-    }
+    if (e.target === e.currentTarget) dismissWelcome();
   });
 
   const searchInput = document.getElementById('search-input');
@@ -933,8 +941,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   function doSearch() {
     const q = (headerSearchInput ? headerSearchInput.value : searchInput.value).trim().toLowerCase();
-    if (headerSearchInput) headerSearchInput.value = q;
-    if (searchInput) searchInput.value = q;
     if (!q) {
       renderProducts();
       return;
@@ -945,21 +951,93 @@ document.addEventListener('DOMContentLoaded', async () => {
         p.description.toLowerCase().includes(q)
     );
     renderProducts(filtered);
+    closeSuggestions();
   }
 
-  searchInput.addEventListener('input', doSearch);
-  searchBtn.addEventListener('click', doSearch);
+  let suggestionsDebounce;
+
+  function showSuggestions() {
+    clearTimeout(suggestionsDebounce);
+    suggestionsDebounce = setTimeout(() => {
+      const input = document.activeElement;
+      if (!input) return;
+      let container, listId;
+      if (input === headerSearchInput) {
+        container = document.getElementById('header-suggestions');
+        listId = 'header-suggestions';
+      } else if (input === searchInput) {
+        container = document.getElementById('hero-suggestions');
+        listId = 'hero-suggestions';
+      } else return;
+      const val = input.value.trim().toLowerCase();
+      if (!val) { container.classList.remove('open'); return; }
+      const matches = products
+        .filter((p) => p.name.toLowerCase().includes(val))
+        .slice(0, 6);
+      if (!matches.length) { container.classList.remove('open'); return; }
+      container.innerHTML = matches
+        .map(
+          (p) =>
+            `<div class="search-suggestion-item" data-id="${p.id}">
+              <img src="${(p.images && p.images[0]) || ''}" alt="${p.name}" loading="lazy" onerror="this.style.display='none'">
+              <span class="suggestion-name">${highlightMatch(p.name, val)}</span>
+              <span class="suggestion-price">${p.deal ? `<span class="orig">${formatPrice(p.price)}</span>${formatPrice(p.deal.flashPrice)}` : formatPrice(p.price)}</span>
+            </div>`
+        )
+        .join('');
+      container.classList.add('open');
+    }, 120);
+  }
+
+  function highlightMatch(text, query) {
+    const idx = text.toLowerCase().indexOf(query);
+    if (idx === -1) return text;
+    return text.slice(0, idx) + '<strong>' + text.slice(idx, idx + query.length) + '</strong>' + text.slice(idx + query.length);
+  }
+
+  function closeSuggestions() {
+    document.getElementById('header-suggestions').classList.remove('open');
+    document.getElementById('hero-suggestions').classList.remove('open');
+  }
+
+  function handleSuggestionClick(e) {
+    const item = e.target.closest('.search-suggestion-item');
+    if (!item) return;
+    e.stopPropagation();
+    const product = products.find((p) => p.id === item.dataset.id);
+    if (!product) return;
+    closeSuggestions();
+    openBuyModal(product);
+  }
+
+  searchInput.addEventListener('input', (e) => {
+    showSuggestions();
+    doSearch();
+  });
+  searchBtn.addEventListener('click', () => { doSearch(); closeSuggestions(); });
   searchInput.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter') doSearch();
+    if (e.key === 'Enter') { doSearch(); closeSuggestions(); }
   });
 
   if (headerSearchInput) {
-    headerSearchInput.addEventListener('input', doSearch);
-    headerSearchBtn.addEventListener('click', doSearch);
+    headerSearchInput.addEventListener('input', () => {
+      showSuggestions();
+      doSearch();
+    });
+    headerSearchBtn.addEventListener('click', () => { doSearch(); closeSuggestions(); });
     headerSearchInput.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter') doSearch();
+      if (e.key === 'Enter') { doSearch(); closeSuggestions(); }
     });
   }
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.header-search') && !e.target.closest('.hero-search')) {
+      closeSuggestions();
+    }
+  });
+
+  document.getElementById('header-suggestions').addEventListener('click', handleSuggestionClick);
+  document.getElementById('hero-suggestions').addEventListener('click', handleSuggestionClick);
 
   document.getElementById('modal-close').addEventListener('click', closeModal);
 
@@ -1040,7 +1118,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
     if (welcomeModal.classList.contains('open') && (!state || state.modal !== 'welcome')) {
       welcomeModal.classList.remove('open');
-      sessionStorage.setItem('welcomeDismissed', '1');
+      document.body.style.overflow = '';
+      localStorage.setItem('welcomeDismissed', '1');
     }
     if (cartPanel.classList.contains('open') && (!state || state.modal !== 'cart')) {
       toggleCart(false);
