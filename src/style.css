@@ -443,6 +443,14 @@ body.dark .size-badge {
   color: var(--blue-500);
 }
 
+body.dark .empty-search {
+  color: #666;
+}
+
+body.dark .empty-search p {
+  color: #666;
+}
+
 body.dark .product-rating .rating-count {
   color: #888;
 }
@@ -909,7 +917,7 @@ body.dark .review-submit-btn {
 .hero-slide--product .product-price {
   font-size: 28px;
   font-weight: 800;
-  color: var(--blue-200);
+  color: var(--white);
   text-shadow: 0 2px 8px rgba(0,0,0,0.5);
 }
 
@@ -924,7 +932,7 @@ body.dark .review-submit-btn {
 .hero-discount {
   font-size: 22px;
   font-weight: 800;
-  color: var(--red-500);
+  color: var(--white);
   text-shadow: 0 2px 8px rgba(0,0,0,0.5);
   margin-top: 2px;
   animation: discountPulse 1.2s ease-in-out infinite;
@@ -1079,6 +1087,27 @@ body.dark .review-submit-btn {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
+}
+
+.empty-search {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  color: var(--gray-400);
+  gap: 12px;
+}
+
+.empty-search svg {
+  opacity: 0.5;
+}
+
+.empty-search p {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--gray-400);
 }
 
 @media (min-width: 640px) {
