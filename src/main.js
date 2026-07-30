@@ -453,22 +453,14 @@ function renderProducts(list) {
         <span class="stock-badge" title="Stock disponible"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg> quedan ${p.stock != null ? p.stock : 1}</span>
         <div class="carousel" data-product-id="${p.id}">
           <div class="carousel-track" id="track-${p.id}">
-            ${(() => {
-              const currentPrice = p.deal ? p.deal.flashPrice : p.price;
-              const savings = p.originalPrice - currentPrice;
-              return p.images
-                .map(
-                  (img, i) =>
-                    `<div class="carousel-slide">
-                  <img src="${img}" alt="${p.name} - imagen ${i + 1}" width="400" height="400" loading="lazy" onerror="this.parentElement.innerHTML='<div class=img-placeholder>📷</div>'">
-                  <div class="carousel-overlay">
-                    <span class="carousel-price">${formatPrice(currentPrice)}</span>
-                    ${savings > 0 ? `<span class="carousel-discount">- ${formatPrice(savings)}</span>` : ''}
-                  </div>
-                </div>`
-                )
-                .join('');
-            })()}
+            ${p.images
+              .map(
+                (img, i) =>
+                  `<div class="carousel-slide">
+                <img src="${img}" alt="${p.name} - imagen ${i + 1}" width="400" height="400" loading="lazy" onerror="this.parentElement.innerHTML='<div class=img-placeholder>📷</div>'">
+              </div>`
+              )
+              .join('')}
           </div>
           ${p.images.length > 1
             ? `
@@ -850,11 +842,13 @@ function initHeroCarousel() {
     const slide = document.createElement('div');
     slide.className = 'hero-slide hero-slide--product';
     slide.style.backgroundImage = `url('${img}')`;
+    const savings = originalPrice - price;
     slide.innerHTML = `
       <div class="hero-overlay"></div>
       <div class="hero-content">
         <div class="product-name">${p.name}</div>
         <div class="product-price">$${price.toLocaleString('es-CO')}${originalPrice && originalPrice !== price ? `<span class="original">$${originalPrice.toLocaleString('es-CO')}</span>` : ''}</div>
+        ${savings > 0 ? `<div class="hero-discount">- $${savings.toLocaleString('es-CO')}</div>` : ''}
         <button class="product-cta" onclick="scrollToProduct(${p.id})">Ver producto</button>
       </div>
     `;
