@@ -7,13 +7,13 @@
     "price": 3000,
     "rating": 4.6,
     "reviewCount": 203,
-    "stock": 10,
     "images": [
       "/img/accsesorios/reloj.png",
       "/img/accsesorios/reloj2.webp"
     ],
+    "stock": 10,
     "deal": {
-      "flashPrice": 5000
+      "flashPrice": 3000
     }
   },
   {
@@ -39,7 +39,7 @@
     "description": "Y26 Mini Audífonos Inalámbricos Transparentes con Pantalla Digital Exquisita, con Micrófono de Condensador y Diseño Compacto, Carga USB Tipo-C, Ideales para Deportes, Música, Llamadas y Video. Son Audífonos Inalámbricos Modernos y Duraderos.",
     "originalPrice": 50000,
     "price": 20000,
-    "rating": 4.5,  
+    "rating": 4.5,
     "reviewCount": 0,
     "stock": 1,
     "images": [
