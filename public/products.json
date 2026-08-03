@@ -211,20 +211,5 @@
       "https://img.kwcdn.com/product/fancy/826bce4f-2158-4bb5-a94d-735d5139072a.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif"
     ],
     "size": "M"
-  },
-  {
-    "id": 1785179204911,
-    "name": "Camiseta",
-    "description": "Camiseta para hombre Y2K con estampado de anime de chica, fibra de poliéster, transferencia de calor",
-    "originalPrice": 50000,
-    "price": 35000,
-    "rating": 4.5,
-    "reviewCount": 0,
-    "images": [
-      "https://img.kwcdn.com/product/open/577c767205d14db89b3a2aaba55831e1-goods.jpeg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif",
-      "https://img.kwcdn.com/product/open/75650ef893b24528bfa03cc023b9635a-goods.jpeg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif"
-    ],
-    "size": "M",
-    "stock": 1
   }
 ]
