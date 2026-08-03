@@ -37,14 +37,14 @@
     "id": 1784007454807,
     "name": "Ganchos para el cabello",
     "description": "(1 unidad)pinzas de garra para el pelo de mujer, varios colores, elegantes y con estilo, bonitas, 6.35 cm, pinzas para el pelo de tamaño mediano con estampado de frutas, adecuadas para primavera y verano, uso en vacaciones en la playa, accesorios para el pelo de mujer, regalo recomendado",
-    "originalPrice": 10000,
-    "price": 5000,
+    "originalPrice": 5000,
+    "price": 2000,
     "rating": 4.5,
     "reviewCount": 0,
-    "stock": 7,
     "images": [
       "https://img.kwcdn.com/product/fancy/c9c83ff1-031d-457f-8bad-ebda9844f02e.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif"
-    ]
+    ],
+    "stock": 5
   },
   {
     "id": 1784009129674,
