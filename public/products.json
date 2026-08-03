@@ -211,5 +211,19 @@
       "https://img.kwcdn.com/product/fancy/826bce4f-2158-4bb5-a94d-735d5139072a.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif"
     ],
     "size": "M"
+  },
+  {
+    "id": 1785785224888,
+    "name": "Camiseta",
+    "description": "Camiseta de manga corta para mujer con estampado doble, cuello redondo, ropa casual esencial para el día, lavable en máquina",
+    "originalPrice": 50000,
+    "price": 35000,
+    "rating": 4.5,
+    "reviewCount": 0,
+    "images": [
+      "https://img.kwcdn.com/product/20ef5f3c30/cd0eda13-453c-4844-8791-930d22928066_1340x1785.jpeg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif"
+    ],
+    "size": "M",
+    "stock": 1
   }
 ]
