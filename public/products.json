@@ -21,14 +21,14 @@
     "name": "Gorro de dormir",
     "description": "(1 unidad) gorros de dormir de satén de moda para mujer con tirantes sueltos - Gorro de dormir suave y liso para cabello rizado y liso, transpirable y cómodo para uso diario, deportes y ocasiones especiales, ropa de dormir cómoda, tejido de textura suave",
     "originalPrice": 15000,
-    "price": 8000,
+    "price": 5000,
     "rating": 4.5,
     "reviewCount": 0,
-    "stock": 4,
     "images": [
       "https://img.kwcdn.com/product/fancy/c34b423d-287c-4abb-b440-44de4e2eb00e.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/avif"
     ],
     "size": "Unica",
+    "stock": 3,
     "deal": {
       "flashPrice": 8000
     }
